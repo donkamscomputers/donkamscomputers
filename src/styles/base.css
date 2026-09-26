@@ -1,0 +1,257 @@
+/* ============================================================
+   DONKAMS — BASE STYLES
+   Reset + typography + layout primitives
+   Depends on: tokens.css
+   ============================================================ */
+
+/* ---------- MODERN RESET ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-regular);
+  color: var(--color-ink-soft);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+button { cursor: pointer; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol { list-style: none; }
+
+/* Remove default focus ring only when we replace it */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-h4);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  letter-spacing: var(--tracking-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  letter-spacing: var(--tracking-h3);
+  font-weight: var(--fw-semi);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semi);
+}
+
+p {
+  color: var(--color-ink-soft);
+  text-wrap: pretty;
+}
+
+strong { font-weight: var(--fw-semi); color: var(--color-ink); }
+
+small { font-size: var(--fs-small); }
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* ---------- UTILITY: TYPOGRAPHY ---------- */
+.text-display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display);
+  font-weight: var(--fw-bold);
+  color: var(--color-ink);
+}
+
+.text-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-semi);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+.text-muted { color: var(--color-ink-muted); }
+.text-ink   { color: var(--color-ink); }
+
+/* ---------- LAYOUT: CONTAINER ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad-lg);
+}
+
+@media (max-width: 1024px) {
+  .container { padding-inline: var(--container-pad-md); }
+}
+
+@media (max-width: 768px) {
+  .container { padding-inline: var(--container-pad-sm); }
+}
+
+.container--narrow {
+  max-width: 720px;
+}
+
+/* ---------- LAYOUT: SECTIONS ---------- */
+.section {
+  padding-block: var(--section-y-lg);
+}
+
+.section--sm { padding-block: var(--section-y-sm); }
+.section--md { padding-block: var(--section-y-md); }
+
+.section--alt  { background-color: var(--color-surface-alt); }
+.section--dark {
+  background-color: var(--color-ink);
+  color: var(--color-ink-invert);
+}
+.section--dark h1,
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 { color: var(--color-ink-invert); }
+.section--dark p  { color: rgba(255, 255, 255, 0.7); }
+
+/* ---------- LAYOUT: GRID HELPERS ---------- */
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (max-width: 1024px) {
+  .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid--2 { grid-template-columns: 1fr; }
+}
+
+/* ---------- LAYOUT: STACK ---------- */
+.stack > * + * { margin-top: var(--space-5); }
+.stack--sm > * + * { margin-top: var(--space-3); }
+.stack--lg > * + * { margin-top: var(--space-7); }
+
+/* ---------- ACCESSIBILITY ---------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-ink);
+  color: var(--color-ink-invert);
+  border-radius: var(--radius-sm);
+  z-index: var(--z-toast);
+  transition: top var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* ---------- SELECTION ---------- */
+::selection {
+  background: var(--color-teal);
+  color: var(--color-ink-invert);
+}
+
+/* Ensure the hidden attribute always works, even against display: rules */
+[hidden] {
+  display: none !important;
+}
+
+/* ---------- SCROLLBAR (subtle, desktop only) ---------- */
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--color-bg); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-strong);
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-ink-muted); }
+}

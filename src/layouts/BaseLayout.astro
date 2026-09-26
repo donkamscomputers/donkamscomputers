@@ -1,0 +1,170 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/content.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  noIndex?: boolean;
+  productSchema?: Record<string, unknown> | null;
+}
+
+const {
+  title,
+  description = 'Smartphones, laptops, Starlink, gaming consoles and accessories from brands you know and trust, available in Minna.',
+  image = '/images/hero-composition.jpg',
+  noIndex = false,
+  productSchema = null,
+} = Astro.props;
+
+const siteName = 'Donkams';
+const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={siteName} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts: preconnect + async load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      />
+    </noscript>
+
+    <!-- Structured data -->
+    <SEO includeWebsite={Astro.url.pathname === '/'} productSchema={productSchema} />
+  </head>
+
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <Header />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script>
+      // Scroll-reveal for section headings and cards.
+      // Skipped entirely if the user prefers reduced motion.
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!prefersReduced && 'IntersectionObserver' in window) {
+        const targets = document.querySelectorAll<HTMLElement>(
+          '.section-heading, .product-card, .category-card, .value-block, .why-item, .brand-block'
+        );
+
+        targets.forEach((el) => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(16px)';
+          el.style.transition = 'opacity 400ms cubic-bezier(0.22, 1, 0.36, 1), transform 400ms cubic-bezier(0.22, 1, 0.36, 1)';
+        });
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const el = entry.target as HTMLElement;
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+                observer.unobserve(el);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+        );
+
+        targets.forEach((el) => observer.observe(el));
+      }
+    </script>
+
+    <script is:inline>
+      // After navigating to /#some-id (from another page or the same page),
+      // scroll the target section into view without fighting the reveal animation.
+      (function () {
+        function scrollToHash() {
+          var hash = window.location.hash;
+          if (!hash || hash === '#') return;
+
+          var el = document.querySelector(hash);
+          if (!el) return;
+
+          // Use "auto" here — CSS scroll-behavior: smooth will handle the animation,
+          // and we set scroll-margin via CSS so the sticky header doesn't cover the top.
+          // We also freeze card transitions for a moment so they don't cancel the scroll.
+          var style = document.createElement('style');
+          style.textContent = '.product-card, .section-heading, .why-item, .brand-block { transition: none !important; }';
+          document.head.appendChild(style);
+
+          requestAnimationFrame(function () {
+            el.scrollIntoView({ behavior: 'auto', block: 'start' });
+
+            // Re-enable transitions after the browser has settled the scroll.
+            setTimeout(function () {
+              style.remove();
+            }, 100);
+          });
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', scrollToHash);
+        } else {
+          scrollToHash();
+        }
+
+        // For same-page anchor clicks (e.g. clicking /#featured while on /)
+        window.addEventListener('hashchange', scrollToHash);
+      })();
+    </script>
+  </body>
+</html>

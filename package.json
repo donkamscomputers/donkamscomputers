@@ -1,0 +1,27 @@
+{
+  "name": "donkams",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "preflight": "node scripts/preflight.mjs",
+    "placeholders": "node scripts/generate-placeholders.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.0",
+    "astro": "^4.15.0",
+    "lightningcss": "^1.33.0"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true,
+    "sharp@0.33.5": true
+  },
+  "devDependencies": {
+    "wrangler": "^4.140.0"
+  }
+}

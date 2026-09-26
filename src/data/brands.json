@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "apple",
+    "name": "Apple",
+    "logo": "/images/brands/apple.svg",
+    "productPath": "/phones/iphone"
+  },
+  {
+    "slug": "samsung",
+    "logo": "/images/brands/samsung.svg",
+    "productPath": "/phones/samsung"
+  },
+  {
+    "slug": "hp",
+    "name": "HP",
+    "logo": "/images/brands/hp.svg",
+    "productPath": "/computers/hp"
+  },
+  {
+    "slug": "dell",
+    "logo": "/images/brands/dell.svg",
+    "productPath": "/computers/dell"
+  },
+  {
+    "slug": "sony",
+    "logo": "/images/brands/sony.svg",
+    "productPath": "/gadgets/consoles"
+  },
+  {
+    "slug": "starlink",
+    "logo": "/images/brands/starlink.svg",
+    "productPath": "/starlink"
+  }
+]

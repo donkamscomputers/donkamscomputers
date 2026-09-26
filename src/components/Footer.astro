@@ -1,0 +1,180 @@
+---
+const year = new Date().getFullYear();
+
+const footerLinks = {
+  site: [
+    { label: 'Home',     href: '/' },
+    { label: 'About',    href: '/about' },
+    { label: 'Contact',  href: '/contact' },
+    { label: 'Location', href: '/location' },
+  ],
+ social: [
+  { label: 'Instagram', href: 'https://www.instagram.com/donkams_computer_/' },
+  { label: 'Facebook',  href: 'https://web.facebook.com/profile.php?id=100064362210511&sk=about' },
+  { label: 'X',         href: 'https://x.com/Donkams_' },
+],
+};
+
+const whatsappNumber = '2348067397482';
+const whatsappLink = `https://wa.me/${whatsappNumber}`;
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand block -->
+      <div class="footer-brand">
+        <p class="footer-logo">DONKAMS COMPUTERS</p>
+        <p class="footer-tagline">Technology. Connectivity. Everyday.</p>
+      </div>
+
+      <!-- Site links -->
+      <nav class="footer-col" aria-label="Footer — site">
+        <p class="footer-heading">Explore</p>
+        <ul>
+          {footerLinks.site.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <p class="footer-heading">Contact</p>
+        <ul>
+          <li>
+            <a href={whatsappLink} target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="mailto:donkamscomputer@gmail.com">donkamscomputer@gmail.com</a>
+          </li>
+          <li>
+            <a href="tel:2348067397482">+234 806 739 7482</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="footer-col">
+        <p class="footer-heading">Follow</p>
+        <ul>
+          {footerLinks.social.map((link) => (
+            <li>
+              <a href={link.href} target="_blank" rel="noopener">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <a href="/privacy" class="footer-legal-link">Privacy Policy</a>
+      <p class="footer-copy">© {year} Donkams Computers. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-ink);
+    color: rgba(255, 255, 255, 0.7);
+    padding-block: var(--space-9) var(--space-6);
+    margin-top: var(--space-9);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: var(--space-7);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* ---------- BRAND BLOCK ---------- */
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.02em;
+    color: var(--color-ink-invert);
+    margin-bottom: var(--space-2);
+  }
+
+  .footer-tagline {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: var(--fs-small);
+  }
+
+  /* ---------- COLUMNS ---------- */
+  .footer-heading {
+    font-size: var(--fs-label);
+    font-weight: var(--fw-semi);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: var(--space-4);
+  }
+
+  .footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .footer-col a {
+    font-size: var(--fs-small);
+    color: rgba(255, 255, 255, 0.75);
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  .footer-col a:hover {
+    color: var(--color-teal-on-dark);
+  }
+
+  /* ---------- BASE ROW ---------- */
+  .footer-base {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding-top: var(--space-6);
+    font-size: var(--fs-small);
+    color: rgba(255, 255, 255, 0.5);
+    flex-wrap: wrap;
+  }
+
+  .footer-legal-link {
+    color: rgba(255, 255, 255, 0.75);
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  .footer-legal-link:hover { color: var(--color-teal-on-dark); }
+
+  .footer-copy { color: rgba(255, 255, 255, 0.5); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .site-footer { padding-block: var(--space-8) var(--space-5); }
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+      padding-bottom: var(--space-6);
+    }
+    .footer-base {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-2);
+    }
+  }
+</style>

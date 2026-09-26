@@ -1,0 +1,108 @@
+---
+interface Product {
+  slug: string;
+  path?: string;
+  name: string;
+  condition: { label: string };
+  image: string;
+  gallery?: string[];
+}
+
+interface Props { product: Product }
+const { product } = Astro.props;
+const allImages = [product.image, ...(product.gallery ?? [])].filter(Boolean);
+const hasMultiple = allImages.length > 1;
+const whatsappNumber = '2348067397482';
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi Donkams, I'd like to ask about the ${product.name}.`)}`;
+const conditionMap: Record<string, string> = { 'Brand New': 'New', 'Used / Tested': 'UK Used', 'Open Box / Tested': 'New / UK Used' };
+const condition = conditionMap[product.condition?.label ?? ''] ?? product.condition?.label ?? 'Available';
+---
+
+<article class="product-card">
+  <div class="product-card__media" data-carousel>
+    <div class="product-card__slides" data-carousel-slides>
+      {allImages.map((src, i) => (
+        <img
+          src={src}
+          alt={`${product.name}${i > 0 ? ` — image ${i + 1}` : ''}`}
+          loading="lazy"
+          decoding="async"
+          width="400"
+          height="400"
+          class="product-card__image"
+          data-slide
+        />
+      ))}
+    </div>
+
+    {hasMultiple && (
+      <>
+        <button type="button" class="product-card__arrow product-card__arrow--prev" aria-label="Previous image" data-arrow="prev">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+        </button>
+        <button type="button" class="product-card__arrow product-card__arrow--next" aria-label="Next image" data-arrow="next">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+        </button>
+        <div class="product-card__dots" data-carousel-dots>
+          {allImages.map((_, i) => <span class:list={['product-card__dot', {'is-active': i === 0}]} data-dot data-index={i} />)}
+        </div>
+      </>
+    )}
+
+    <a href={whatsappLink} target="_blank" rel="noopener" class="product-card__whatsapp" aria-label={`Ask about ${product.name} on WhatsApp`}>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.7 6L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.4ZM12.2 21.7h-.1c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.8 1 1-3.7-.2-.3a9.8 9.8 0 1 1 8.2 4.5Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.2-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.2 3.2c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.6.9 3.5.8.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></svg>
+    </a>
+  </div>
+
+  <div class="product-card__body">
+    <h3 class="product-card__name">{product.name}</h3>
+    <p class="product-card__condition">{condition}</p>
+  </div>
+
+  <div class="product-card__foot">
+    <span class="product-card__price">Contact for Price</span>
+    
+  </div>
+</article>
+
+<style>
+  .product-card { display:flex; flex-direction:column; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); overflow:hidden; transition:border-color var(--dur-fast) var(--ease-out),transform var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out); }
+  .product-card:hover { border-color:var(--color-ink); transform:translateY(-2px); box-shadow:var(--shadow-sm); }
+  .product-card__media { position:relative; aspect-ratio:1/1; background:var(--color-surface-alt); overflow:hidden; }
+  .product-card__slides { display:flex; width:100%; height:100%; transition:transform var(--dur-base) var(--ease-out); will-change:transform; }
+  .product-card__image { flex:0 0 100%; width:100%; height:100%; object-fit:contain; user-select:none; -webkit-user-drag:none; pointer-events:none; }
+  .product-card__arrow { position:absolute; top:50%; transform:translateY(-50%); width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--color-border); border-radius:50%; background:rgba(255,255,255,.9); color:var(--color-ink); cursor:pointer; z-index:2; }
+  .product-card__arrow--prev { left:10px; } .product-card__arrow--next { right:10px; }
+  .product-card__dots { position:absolute; left:50%; bottom:10px; transform:translateX(-50%); display:flex; gap:5px; padding:4px 7px; border-radius:999px; background:rgba(0,0,0,.38); z-index:2; }
+  .product-card__dot { width:5px; height:5px; border-radius:50%; background:rgba(255,255,255,.55); } .product-card__dot.is-active { background:#fff; }
+  .product-card__whatsapp { position:absolute; right:10px; top:10px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:#fff; color:#25D366; box-shadow:0 3px 12px rgba(0,0,0,.14); z-index:3; }
+  .product-card__body { padding:var(--space-4) var(--space-4) var(--space-2); }
+  .product-card__name { margin:0; font-size:var(--fs-body); line-height:1.4; font-weight:var(--fw-semi); color:var(--color-ink); }
+  .product-card__condition { margin:var(--space-2) 0 0; font-size:var(--fs-small); color:var(--color-ink-muted); }
+  .product-card__foot { display:flex; align-items:center; justify-content:space-between; gap:var(--space-3); padding:var(--space-2) var(--space-4) var(--space-4); }
+  .product-card__price { font-size:var(--fs-small); font-weight:var(--fw-semi); color:var(--color-ink); }
+  @media (max-width:640px) { .product-card__foot { align-items:flex-start; flex-direction:column; } }
+</style>
+
+<script>
+  const AUTOPLAY_INTERVAL = 3500;
+  document.querySelectorAll<HTMLElement>('.product-card').forEach((card) => {
+    const slides = card.querySelector<HTMLElement>('[data-carousel-slides]');
+    const carousel = card.querySelector<HTMLElement>('[data-carousel]');
+    if (!slides || !carousel) return;
+    const slideEls = slides.querySelectorAll<HTMLElement>('[data-slide]');
+    if (slideEls.length <= 1) return;
+    const prevBtn = carousel.querySelector<HTMLButtonElement>('[data-arrow="prev"]');
+    const nextBtn = carousel.querySelector<HTMLButtonElement>('[data-arrow="next"]');
+    const dots = carousel.querySelectorAll<HTMLElement>('[data-dot]');
+    let current=0, timer: number|null=null;
+    const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const goTo=(i:number)=>{ current=(i+slideEls.length)%slideEls.length; slides.style.transform=`translateX(-${current*100}%)`; dots.forEach((d,j)=>d.classList.toggle('is-active',j===current)); };
+    const start=()=>{ if(reduced)return; if(timer!==null)window.clearInterval(timer); timer=window.setInterval(()=>goTo(current+1),AUTOPLAY_INTERVAL); };
+    const stop=()=>{ if(timer!==null){window.clearInterval(timer);timer=null;} };
+    prevBtn?.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();stop();goTo(current-1);start();});
+    nextBtn?.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();stop();goTo(current+1);start();});
+    dots.forEach((d,i)=>d.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();stop();goTo(i);start();}));
+    card.addEventListener('mouseenter',stop); card.addEventListener('mouseleave',start); start();
+  });
+</script>

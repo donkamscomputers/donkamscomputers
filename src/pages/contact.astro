@@ -1,0 +1,400 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import '../styles/content.css';
+
+// ============================================================
+// Contact details
+// ============================================================
+const contactEmail = 'donkamscomputer@gmail.com';
+const whatsappNumber = '2348067397482';
+
+// Where to redirect after a successful submission.
+// Change this to your real domain once deployed.
+// For local testing: 'http://localhost:4321/thank-you'
+const thankYouUrl = '/thank-you';
+
+// ============================================================
+
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  "Hi Donkams, I'd like to ask about a product."
+)}`;
+---
+
+<BaseLayout
+  title="Contact Donkams Computers in Minna"
+  description="Contact Donkams Computers in Minna for phones, laptops, Starlink, gaming consoles and accessories. Message us on WhatsApp, call, email or visit one of our two stores."
+>
+  <section class="page-header">
+    <div class="container">
+      <p class="text-label page-header__eyebrow">Contact</p>
+      <h1 class="page-header__title">Let's find the right thing.</h1>
+      <p class="page-header__lede">
+        Whether you know exactly what you want or you're still deciding,
+        we're here to help.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <!-- ---------- INFO ---------- -->
+        <div class="contact-info">
+          <div>
+            <h2 class="contact-info__title">Get in touch</h2>
+            <p class="contact-info__text" style="margin-top: var(--space-3);">
+              The fastest way to reach us is WhatsApp. For anything else, use
+              one of the options below.
+            </p>
+          </div>
+
+          <div class="contact-methods">
+            <a href={whatsappLink} target="_blank" rel="noopener" class="contact-method">
+              <span class="contact-method__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                </svg>
+              </span>
+              <span class="contact-method__body">
+                <span class="contact-method__label">WhatsApp</span>
+                <span class="contact-method__value">Message us directly</span>
+                <span class="contact-method__hint">Fastest response</span>
+              </span>
+            </a>
+
+            <a href="tel:+2348067397482" class="contact-method">
+              <span class="contact-method__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.75"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </span>
+              <span class="contact-method__body">
+                <span class="contact-method__label">Phone</span>
+                <span class="contact-method__value">+234 806 739 7482</span>
+                <span class="contact-method__hint">Business hours</span>
+              </span>
+            </a>
+
+            <a href={`mailto:${contactEmail}`} class="contact-method">
+              <span class="contact-method__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.75"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <path d="m3 7 9 6 9-6"/>
+                </svg>
+              </span>
+              <span class="contact-method__body">
+                <span class="contact-method__label">Email</span>
+                <span class="contact-method__value">{contactEmail}</span>
+                <span class="contact-method__hint">For detailed enquiries</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- ---------- FORM ---------- -->
+        <div>
+          <form
+            class="contact-form"
+            id="contact-form"
+            action={`https://formsubmit.co/${contactEmail}`}
+            method="POST"
+            novalidate
+            data-contact-form
+          >
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New enquiry from Donkams website" />
+            <input type="hidden" name="_next" value="/thank-you" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <!-- Honeypot — bots fill this, humans don't. Do not remove. -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <!-- Error banner — hidden by default, shown on failure -->
+            <div class="form-banner form-banner--error" id="form-banner" hidden>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8v4"/>
+                <path d="M12 16h.01"/>
+              </svg>
+              <span>
+                Something went wrong. Please try again, or
+                <a href={whatsappLink} target="_blank" rel="noopener">message us on WhatsApp</a>.
+              </span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field" data-field="name">
+                <label class="form-field__label" for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+                <span class="form-error" data-error-for="name" hidden>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v4"/><path d="M12 16h.01"/>
+                  </svg>
+                  <span data-error-text></span>
+                </span>
+              </div>
+
+              <div class="form-field" data-field="email">
+                <label class="form-field__label" for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+                <span class="form-error" data-error-for="email" hidden>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v4"/><path d="M12 16h.01"/>
+                  </svg>
+                  <span data-error-text></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field" data-field="phone">
+                <label class="form-field__label" for="phone">
+                  Phone <span>(optional)</span>
+                </label>
+                <input type="tel" id="phone" name="phone" placeholder="+234" autocomplete="tel" />
+                <span class="form-error" data-error-for="phone" hidden>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v4"/><path d="M12 16h.01"/>
+                  </svg>
+                  <span data-error-text></span>
+                </span>
+              </div>
+
+              <div class="form-field" data-field="subject">
+                <label class="form-field__label" for="subject">
+                  Subject <span>(optional)</span>
+                </label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+              </div>
+            </div>
+
+            <div class="form-field" data-field="message">
+              <label class="form-field__label" for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what you're looking for, or ask a question." required></textarea>
+              <span class="form-error" data-error-for="message" hidden>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 8v4"/><path d="M12 16h.01"/>
+                </svg>
+                <span data-error-text></span>
+              </span>
+            </div>
+
+            <label class="form-consent" data-field="consent">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span>I agree to be contacted about my enquiry.</span>
+            </label>
+            <span class="form-error" data-error-for="consent" hidden style="margin-top: -12px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8v4"/><path d="M12 16h.01"/>
+              </svg>
+              <span data-error-text></span>
+            </span>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary btn--lg" data-submit-btn>
+                <span data-submit-label>Send message</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true" data-submit-icon>
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Ensure hidden attribute works even when other rules set display: */
+  [hidden] {
+    display: none !important;
+  }
+</style>
+
+<script>
+  // ============================================================
+  // CONTACT FORM — client-side validation
+  // Submission uses native POST to FormSubmit.
+  // ============================================================
+
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const banner = document.getElementById('form-banner');
+  if (!form) throw new Error('Contact form not found');
+
+  type FieldName = 'name' | 'email' | 'phone' | 'subject' | 'message' | 'consent';
+
+  const rules: Record<FieldName, (value: string, checked?: boolean) => string | null> = {
+    name: (v) => (v.trim().length >= 2 ? null : 'Please enter your name.'),
+    email: (v) =>
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())
+        ? null
+        : 'Please enter a valid email address.',
+    phone: (v) =>
+      v.trim() === '' || /^[+\d\s()-]{7,}$/.test(v.trim())
+        ? null
+        : "That phone number doesn't look right.",
+    subject: () => null,
+    message: (v) =>
+      v.trim().length >= 10 ? null : 'Please tell us a bit more (at least 10 characters).',
+    consent: (_, checked) => (checked ? null : 'Please accept before submitting.'),
+  };
+
+  const touched = new Set<FieldName>();
+
+  function getFieldEl(name: FieldName) {
+    return form!.querySelector<HTMLElement>(`[data-field="${name}"]`);
+  }
+
+  function getErrorEl(name: FieldName) {
+    return form!.querySelector<HTMLElement>(`[data-error-for="${name}"]`);
+  }
+
+  function getInput(name: FieldName) {
+    return form!.elements.namedItem(name) as
+      | HTMLInputElement
+      | HTMLTextAreaElement
+      | null;
+  }
+
+  function setFieldError(name: FieldName, message: string | null) {
+    const fieldEl = getFieldEl(name);
+    const errorEl = getErrorEl(name);
+    const input = getInput(name);
+
+    if (message) {
+      fieldEl?.classList.add('is-invalid');
+      if (errorEl) {
+        errorEl.hidden = false;
+        const text = errorEl.querySelector('[data-error-text]');
+        if (text) text.textContent = message;
+      }
+      input?.setAttribute('aria-invalid', 'true');
+    } else {
+      fieldEl?.classList.remove('is-invalid');
+      if (errorEl) errorEl.hidden = true;
+      input?.removeAttribute('aria-invalid');
+    }
+  }
+
+  function validateField(name: FieldName): boolean {
+    const input = getInput(name);
+    if (!input) return true;
+    const value = input.value;
+    const checked = (input as HTMLInputElement).checked;
+    const error = rules[name](value, checked);
+    setFieldError(name, error);
+    return !error;
+  }
+
+  (
+    ['name', 'email', 'phone', 'subject', 'message', 'consent'] as FieldName[]
+  ).forEach((name) => {
+    const input = getInput(name);
+    if (!input) return;
+
+    input.addEventListener('blur', () => {
+      touched.add(name);
+      validateField(name);
+    });
+
+    input.addEventListener('input', () => {
+      if (touched.has(name)) validateField(name);
+    });
+
+    input.addEventListener('change', () => {
+      if (touched.has(name)) validateField(name);
+    });
+  });
+
+  // ---------- SUBMIT ----------
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // Hide any previous banner
+  if (banner) banner.hidden = true;
+
+  // Validate all fields
+  const allFields: FieldName[] = [
+    'name',
+    'email',
+    'phone',
+    'subject',
+    'message',
+    'consent',
+  ];
+  allFields.forEach((n) => touched.add(n));
+
+  const results = allFields.map((n) => validateField(n));
+  const allValid = results.every(Boolean);
+
+  if (!allValid) {
+    const firstInvalid = allFields.find((n) => !results[allFields.indexOf(n)]);
+    if (firstInvalid) getInput(firstInvalid)?.focus();
+    return;
+  }
+
+  // Show sending state
+  const submitBtn = document.querySelector<HTMLButtonElement>('[data-submit-btn]');
+  const submitLabel = document.querySelector<HTMLElement>('[data-submit-label]');
+  if (submitBtn) submitBtn.disabled = true;
+  if (submitLabel) submitLabel.textContent = 'Sending…';
+
+  try {
+    // Build the payload from the form
+    const formData = new FormData(form);
+
+    // FormSubmit's AJAX endpoint uses the same URL as the form action
+    const response = await fetch(form.action, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+      },
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error(`FormSubmit responded with ${response.status}`);
+    }
+
+    // Success — redirect to thank-you page
+    window.location.href = '/thank-you';
+  } catch (error) {
+    // Something went wrong — show the banner, keep the user on the page
+    console.error('Contact form submission failed:', error);
+    if (banner) {
+      banner.hidden = false;
+      banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    if (submitBtn) submitBtn.disabled = false;
+    if (submitLabel) submitLabel.textContent = 'Send message';
+  }
+});
+</script>

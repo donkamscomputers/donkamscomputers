@@ -1,0 +1,228 @@
+---
+interface NavChild {
+  label: string;
+  href: string;
+  children?: NavChild[];
+}
+
+interface Props {
+  item: {
+    label: string;
+    href: string;
+    children: NavChild[];
+  };
+  isActive: boolean;
+}
+
+const { item, isActive } = Astro.props;
+---
+
+<div class="nav-dropdown" data-nav-dropdown>
+  <button
+    type="button"
+    class:list={['nav-link nav-trigger', { 'is-active': isActive }]}
+    aria-expanded="false"
+    aria-haspopup="true"
+    data-dropdown-trigger
+  >
+    {item.label}
+    <svg
+      class="nav-trigger__chevron"
+      width="12"
+      height="12"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <div class="nav-dropdown__panel" data-dropdown-panel hidden>
+    <ul>
+      {item.children.map((child) => (
+        <li>
+          <a href={child.href} class="nav-dropdown__link">
+            {child.label}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    color: var(--color-ink-soft);
+    position: relative;
+    padding: var(--space-2) 0;
+    transition: color var(--dur-fast) var(--ease-out);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .nav-trigger:hover { color: var(--color-ink); }
+
+  .nav-trigger.is-active { color: var(--color-ink); }
+
+  .nav-trigger.is-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: var(--color-teal);
+    border-radius: var(--radius-full);
+  }
+
+  .nav-trigger__chevron {
+    transition: transform var(--dur-fast) var(--ease-out);
+  }
+
+  .nav-trigger[aria-expanded="true"] .nav-trigger__chevron {
+    transform: rotate(180deg);
+  }
+
+  /* ---------- PANEL ---------- */
+  .nav-dropdown__panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 220px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-2);
+    z-index: 20;
+  }
+
+  .nav-dropdown__panel[hidden] { display: none; }
+
+  .nav-dropdown__panel ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-dropdown__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    color: var(--color-ink);
+    transition:
+      background var(--dur-fast) var(--ease-out),
+      color var(--dur-fast) var(--ease-out);
+  }
+
+  .nav-dropdown__link:hover {
+    background: var(--color-surface-alt);
+    color: var(--color-teal);
+  }
+
+  .nav-dropdown__link svg {
+    opacity: 0;
+    transition: opacity var(--dur-fast) var(--ease-out);
+    flex-shrink: 0;
+  }
+
+  .nav-dropdown__link:hover svg { opacity: 1; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-trigger__chevron,
+    .nav-dropdown__link,
+    .nav-dropdown__link svg { transition: none; }
+  }
+</style>
+
+<script>
+  const dropdowns = document.querySelectorAll<HTMLElement>('[data-nav-dropdown]');
+
+  dropdowns.forEach((dd) => {
+    const trigger = dd.querySelector<HTMLButtonElement>('[data-dropdown-trigger]');
+    const panel = dd.querySelector<HTMLElement>('[data-dropdown-panel]');
+    if (!trigger || !panel) return;
+
+    function open() {
+      // Close all other dropdowns first
+      document.querySelectorAll<HTMLElement>('[data-nav-dropdown]').forEach((other) => {
+        if (other === dd) return;
+        const otherPanel = other.querySelector<HTMLElement>('[data-dropdown-panel]');
+        const otherTrigger = other.querySelector<HTMLButtonElement>('[data-dropdown-trigger]');
+        if (otherPanel) otherPanel.hidden = true;
+        if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+      });
+
+      panel!.hidden = false;
+      trigger!.setAttribute('aria-expanded', 'true');
+    }
+
+    function close() {
+      panel!.hidden = true;
+      trigger!.setAttribute('aria-expanded', 'false');
+    }
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+      if (isOpen) close();
+      else open();
+    });
+
+    // Close when clicking a link inside
+    panel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', close);
+    });
+  });
+
+  // Close all when clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll<HTMLElement>('[data-nav-dropdown]').forEach((dd) => {
+      const trigger = dd.querySelector<HTMLButtonElement>('[data-dropdown-trigger]');
+      const panel = dd.querySelector<HTMLElement>('[data-dropdown-panel]');
+      if (panel) panel.hidden = true;
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close all on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll<HTMLElement>('[data-nav-dropdown]').forEach((dd) => {
+      const trigger = dd.querySelector<HTMLButtonElement>('[data-dropdown-trigger]');
+      const panel = dd.querySelector<HTMLElement>('[data-dropdown-panel]');
+      if (panel) panel.hidden = true;
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

@@ -1,0 +1,156 @@
+---
+interface Props {
+  condition: {
+    type: 'new' | 'uk-used';
+    label: string;
+    points: string[];
+    note?: string;
+    warranty?: string;
+  };
+}
+
+const { condition } = Astro.props;
+---
+
+<section class:list={['condition-block', `condition-block--${condition.type}`]}>
+  <header class="condition-block__header">
+    <p class="condition-block__eyebrow">Condition</p>
+    <h2 class="condition-block__label">{condition.label}</h2>
+  </header>
+
+  <ul class="condition-block__points">
+    {condition.points.map((point) => (
+      <li>
+        <svg
+          class="condition-block__check"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 6 9 17l-5-5" />
+        </svg>
+        <span>{point}</span>
+      </li>
+    ))}
+  </ul>
+
+  {condition.note && (
+    <p class="condition-block__note">{condition.note}</p>
+  )}
+
+  {condition.warranty && (
+    <p class="condition-block__warranty">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+      {condition.warranty}
+    </p>
+  )}
+</section>
+
+<style>
+  .condition-block {
+    padding: var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .condition-block--new {
+    border-left: 3px solid var(--color-teal);
+  }
+
+  .condition-block--uk-used {
+    border-left: 3px solid #B7791F;
+  }
+
+  .condition-block__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .condition-block__eyebrow {
+    font-size: var(--fs-label);
+    font-weight: var(--fw-semi);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+
+  .condition-block__label {
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-semi);
+    color: var(--color-ink);
+    letter-spacing: -0.01em;
+  }
+
+  .condition-block__points {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .condition-block__points li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    font-size: var(--fs-small);
+    line-height: 1.5;
+    color: var(--color-ink-soft);
+  }
+
+  .condition-block__check {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--color-success);
+  }
+
+  .condition-block--uk-used .condition-block__check {
+    color: #B7791F;
+  }
+
+  .condition-block__note {
+    font-size: var(--fs-small);
+    line-height: 1.6;
+    color: var(--color-ink-muted);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+  }
+
+  .condition-block__warranty {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-semi);
+    color: var(--color-ink);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+  }
+
+  .condition-block__warranty svg {
+    flex-shrink: 0;
+    color: var(--color-teal);
+  }
+
+  .condition-block--uk-used .condition-block__warranty svg {
+    color: #B7791F;
+  }
+</style>

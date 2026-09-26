@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Button from '../components/Button.astro';
+
+import '../styles/content.css';
+
+const values = [
+  {
+    label: 'Quality',
+    title: 'Products from established brands.',
+    text: 'Every device we carry comes from a brand with a track record. Nothing is here by accident.',
+  },
+  {
+    label: 'Choice',
+    title: 'Technology for work, communication and everyday life.',
+    text: 'Options for whatever you actually need — not just what\'s trending this month.',
+  },
+  {
+    label: 'Support',
+    title: 'Get assistance before and after your purchase.',
+    text: 'A real person to talk to when you have a question — before or after you buy.',
+  },
+];
+
+const whatsappNumber = '2348067397482';
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  "Hi Donkams, I'd like to ask a question."
+)}`;
+---
+
+<BaseLayout
+  title="About"
+  description="Donkams Computers provides smartphones, laptops, Starlink, gaming consoles and accessories in Minna, Niger State, helping customers find reliable technology without the guesswork."
+>
+  <section class="page-header">
+    <div class="container">
+      <p class="text-label page-header__eyebrow">About Donkams Computers</p>
+      <h1 class="page-header__title">Technology, Made Simple.</h1>
+      <p class="page-header__lede">
+        From smartphones and laptops to Starlink, gaming and everyday
+        accessories, Donkams brings together the technology you need in one
+        place, with two stores serving customers across Minna.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-intro">
+    <div class="container">
+      <div class="about-intro__grid">
+        <div class="prose">
+          <h2>What we do</h2>
+          <p>
+              We bring together technology from brands people already know and
+              trust (Apple, Samsung, HP, Dell, Lenovo, Oraimo and Starlink) and
+              make it easier to find the right device in Minna. From smartphones
+              and laptops to Starlink kits, gaming consoles and everyday
+              accessories, we focus on products that fit the way people work,
+              study, connect and live.
+          </p>
+
+          <h2>How we work</h2>
+          <p>
+              We're not trying to be a marketplace or sell everything to everyone.
+          We keep a focused range of phones, laptops, Starlink, gaming and
+          accessories, and help you choose based on what you actually need.
+          </p>
+          <p>
+             If you're not sure what to buy, ask us. We'd rather help you find
+             the right phone, laptop, Starlink setup or accessory than have you
+             buy something that doesn't fit your needs.
+          </p>
+        </div>
+
+        <div class="prose">
+          <h2>Where to find us</h2>
+          <p>
+            Donkams Computers has two stores in Minna, Niger State, making it
+            easy to visit us, check available products and speak with our team
+            directly. You can also message us on WhatsApp or send an enquiry
+            through the website and get a real answer from a real person.
+          </p>
+
+          <h2>What we don't do</h2>
+          <p>
+            We don't make claims we can't back up. We don't recommend products
+            simply because they're popular. And we don't disappear after you've
+            made a purchase. Our goal is to give you straightforward information
+            and support you can rely on.
+          </p>
+
+          <div style="margin-top: var(--space-6);">
+            <Button href="/contact" variant="secondary" icon="arrow">
+              Get in touch
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-values">
+    <div class="container">
+      <SectionHeading
+        eyebrow="What matters to us"
+        title="Three things we hold to."
+      />
+
+      <div class="about-values__grid">
+        {values.map((value) => (
+          <div class="value-block">
+            <p class="value-block__label">{value.label}</p>
+            <h3 class="value-block__title">{value.title}</h3>
+            <p class="value-block__text">{value.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="text-align: center; max-width: 640px;">
+      <SectionHeading
+        eyebrow="Ready when you are"
+        title="Looking for a Phone, Laptop or Starlink?"
+        subtitle="Tell us what you need and we'll help you check availability and find the right device or solution at Donkams in Minna."
+        align="center"
+      />
+      <div style="margin-top: var(--space-7); display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+        <Button href={whatsappLink} variant="primary" size="lg" icon="whatsapp" target="_blank" rel="noopener">
+          WhatsApp Donkams Computers
+        </Button>
+        <Button href="/#featured" variant="secondary" size="lg" icon="arrow">
+          Browse Products
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

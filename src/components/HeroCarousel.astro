@@ -1,0 +1,103 @@
+---
+interface Props {
+  images: string[];
+  interval?: number;
+}
+
+const { images, interval = 6000 } = Astro.props;
+---
+
+<div class="hero-bg" data-hero-bg data-interval={interval}>
+  {images.map((src, i) => (
+    <img
+      src={src}
+      alt=""
+      class:list={['hero-bg__image', { 'is-active': i === 0 }]}
+      data-slide
+      data-index={i}
+      loading={i === 0 ? 'eager' : 'lazy'}
+      decoding="async"
+      width="1920"
+      height="1080"
+    />
+  ))}
+  <div class="hero-bg__overlay"></div>
+</div>
+
+<style>
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .hero-bg__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1400ms ease-in-out;
+    pointer-events: none;
+  }
+
+  .hero-bg__image.is-active {
+    opacity: 1;
+  }
+
+  /* Dark gradient overlay — darkest on the left so text reads clearly */
+  .hero-bg__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 16, 0.75) 0%,
+      rgba(0, 0, 16, 0.6) 40%,
+      rgba(0, 0, 16, 0.35) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-bg__image {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const backgrounds = document.querySelectorAll<HTMLElement>('[data-hero-bg]');
+
+  backgrounds.forEach((bg) => {
+    const images = bg.querySelectorAll<HTMLImageElement>('[data-slide]');
+    if (images.length <= 1) return;
+
+    const interval = parseInt(bg.dataset.interval ?? '6000', 10);
+    let current = 0;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
+
+    function advance() {
+      current = (current + 1) % images.length;
+      images.forEach((img, i) => {
+        img.classList.toggle('is-active', i === current);
+      });
+    }
+
+    let timer = window.setInterval(advance, interval);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        clearInterval(timer);
+      } else {
+        timer = window.setInterval(advance, interval);
+      }
+    });
+  });
+</script>

@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import products from '../data/products.json';
+---
+<BaseLayout title="All Products | Donkams Computers" description="Browse the current Donkams Computers product catalogue.">
+  <section class="page-header"><div class="container"><p class="text-label">Catalogue</p><h1 class="page-header__title">All Products</h1><p class="page-header__lede">Browse our current selection. Contact Donkams for availability and pricing.</p></div></section>
+  <section class="section"><div class="container"><div class="catalogue-grid">{products.map((product) => <ProductCard product={product} />)}</div></div></section>
+</BaseLayout>
+<style>
+.catalogue-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-5)}
+@media(max-width:1024px){.catalogue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.catalogue-grid{grid-template-columns:1fr}}
+</style>

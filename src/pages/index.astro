@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProductCard from '../components/ProductCard.astro';
+import HeroCarousel from '../components/HeroCarousel.astro';
+
+import products from '../data/products.json';
+
+import '../styles/homepage.css';
+
+import { readdirSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+const galleryDir = join(process.cwd(), 'public/images/gallery');
+const videoDir = join(process.cwd(), 'public/videos');
+const galleryPhotos = existsSync(galleryDir)
+  ? readdirSync(galleryDir).filter((file) => /\.(webp|jpg|jpeg|png)$/i.test(file)).slice(0, 5)
+  : [];
+const galleryVideos = existsSync(videoDir)
+  ? readdirSync(videoDir).filter((file) => /\.(mp4|webm|mov)$/i.test(file)).slice(0, 3)
+  : [];
+
+// ----- Hero -----
+const heroEyebrow = 'Technology. Connectivity. Everyday.';
+const heroTitle = 'Phones, Laptops & Starlink in Minna';
+const heroSubtitle =
+  'Smartphones, laptops, Starlink, gaming and accessories from brands you know and trust. Visit either of our two stores in Minna or message us to check availability.';
+
+// ----- Hero image -----
+// Keep one real asset here until dedicated hero photography is available.
+const heroImages = [
+  '/images/hero-composition.webp',
+  '/images/hero-composition2.webp',
+  '/images/hero-composition3.webp',
+  '/images/hero-composition4.webp',
+];
+// ----- Featured products -----
+// products.json is the single source of truth. Keep the homepage selection explicit.
+const featuredSlugs = [
+  'iphone-17-256gb',
+  'samsung-s25-ultra-256gb',
+  'hp-elitebook-x360-1030-g7-i5',
+  'dell-latitude-7420-i7',
+  'macbook-air-m1-8-256',
+  'starlink-standard-gen4',
+  'playstation-5',
+];
+
+const featuredProducts = featuredSlugs
+  .map((slug) => products.find((product) => product.slug === slug))
+  .filter((product): product is (typeof products)[number] => Boolean(product));
+
+// ----- Why Donkams -----
+const whyItems = [
+  {
+    title: 'Trusted Brands',
+    text: 'Shop technology from Apple, Samsung, HP, Dell, Sony and Starlink.',
+  },
+  {
+    title: 'Quality Products',
+    text: 'A focused range of phones, laptops, Starlink, gaming and accessories selected for everyday use.',
+  },
+  {
+    title: 'Personal Assistance',
+    text: 'Talk to a real person for help choosing the right phone, laptop, Starlink setup or accessory.',
+  },
+  {
+    title: '2 Stores in Minna',
+    text: 'Visit either Donkams location in Minna or message us directly when you need help.',
+  },
+];
+
+// ----- WhatsApp -----
+const whatsappNumber = '2348067397482';
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  "Hi Donkams, I'd like to ask about a product."
+)}`;
+---
+
+<BaseLayout title="Donkams Computers | Phones, Laptops & Starlink in Minna">
+    <!-- ============================================================
+       HERO (full-bleed with fading background, centered text)
+       ============================================================ -->
+  <section class="hero">
+    <HeroCarousel images={heroImages} />
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">{heroEyebrow}</p>
+
+      <h1 class="hero__title">{heroTitle}</h1>
+
+      <p class="hero__subtitle">{heroSubtitle}</p>
+
+      <div class="hero__actions">
+        <Button href="#featured" variant="primary" size="lg" icon="arrow">
+          Explore Products
+        </Button>
+        <Button href={whatsappLink} variant="secondary" size="lg" target="_blank" rel="noopener">
+          Talk to Donkams
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED PRODUCTS
+       ============================================================ -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="featured__head">
+        <div>
+          <p class="text-label">Featured</p>
+          <h2 class="featured__title">Featured Products</h2>
+          <p class="featured__lede">A few of the products customers ask us about most.</p>
+        </div>
+        <a href="/products" class="featured__more">View More Products <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="featured__grid">
+        {featuredProducts.map((product) => <ProductCard product={product} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="inside-donkams" id="inside-donkams">
+    <div class="container">
+      <div class="inside-donkams__head">
+        <p class="text-label">Inside Donkams</p>
+        <h2 class="inside-donkams__title">See the Donkams experience.</h2>
+        <p class="inside-donkams__lede">Photos and videos from our stores. Add your own media to the gallery folders to keep this section fresh.</p>
+      </div>
+      {galleryPhotos.length > 0 || galleryVideos.length > 0 ? (
+        <div class="inside-donkams__media">
+          {galleryPhotos.map((file) => <figure class="inside-donkams__photo"><img src={`/images/gallery/${file}`} alt="Inside Donkams Computers" loading="lazy" decoding="async" /></figure>)}
+          {galleryVideos.map((file) => <figure class="inside-donkams__video"><video controls preload="metadata" playsinline><source src={`/videos/${file}`} /></video></figure>)}
+        </div>
+      ) : (
+        <div class="inside-donkams__empty">
+          <strong>Your gallery is ready.</strong>
+          <p>Add up to 5 photos to <code>public/images/gallery/</code> and up to 3 videos to <code>public/videos/</code>. They will appear here automatically.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="convert" id="contact-cta">
+    <div class="container">
+      <div class="convert__inner">
+        <div>
+          <p class="text-label">Need help choosing?</p>
+          <h2 class="convert__title">Talk to Donkams.</h2>
+          <p class="convert__text">Contact us for current stock, condition and availability.</p>
+        </div>
+        <Button href="/contact" variant="primary" icon="arrow">Contact Donkams</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

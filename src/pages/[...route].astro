@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import products from '../data/products.json';
+
+const collections = {
+  'phones/iphone': { title: 'iPhone', category: 'phones', brand: 'apple' },
+  'phones/samsung': { title: 'Samsung', category: 'phones', brand: 'samsung' },
+  'phones/google-pixel': { title: 'Google Pixel', category: 'phones', brand: 'google-pixel' },
+  'computers/hp': { title: 'HP Laptops', category: 'laptops', brand: 'hp' },
+  'computers/macbook': { title: 'MacBook', category: 'laptops', brand: 'apple' },
+  'computers/dell': { title: 'Dell Laptops', category: 'laptops', brand: 'dell' },
+  'gadgets/consoles': { title: 'Consoles', category: 'gaming' },
+  'gadgets/accessories': { title: 'Accessories', category: 'accessories' },
+};
+
+export function getStaticPaths() {
+  return Object.keys(collections).map((route) => ({ params: { route } }));
+}
+
+const route = Astro.params.route ?? '';
+const collection = collections[route as keyof typeof collections];
+const collectionProducts = collection
+  ? products.filter((product) =>
+      product.category === collection.category &&
+      (!collection.brand || product.brand === collection.brand)
+    )
+  : [];
+---
+
+<BaseLayout
+  title={collection ? `${collection.title} | Donkams Computers` : 'Collection | Donkams Computers'}
+  description={collection ? `Browse ${collection.title} products from Donkams Computers.` : 'Browse Donkams Computers products.'}
+>
+  {collection ? (
+    <section class="page-header">
+      <div class="container">
+        <p class="text-label">Collection</p>
+        <h1 class="page-header__title">{collection.title}</h1>
+        <p class="page-header__lede">Browse the current {collection.title} selection. Contact Donkams for availability and pricing.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        {collectionProducts.length > 0 ? (
+          <div class="collection-grid">
+            {collectionProducts.map((product) => <ProductCard product={product} />)}
+          </div>
+        ) : (
+          <div class="empty-collection">
+            <h2>Products coming soon</h2>
+            <p>We are preparing this collection. Contact Donkams for current availability.</p>
+            <a href="/contact">Contact Donkams →</a>
+          </div>
+        )}
+      </div>
+    </section>
+  ) : (
+    <section class="page-header"><div class="container"><p class="text-label">404</p><h1 class="page-header__title">Collection not found</h1><p class="page-header__lede">The collection you requested does not exist.</p></div></section>
+  )}
+</BaseLayout>
+
+<style>
+.collection-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-5)}
+.empty-collection{padding:var(--space-8);border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface-alt)}
+.empty-collection h2{margin:0 0 var(--space-2)}
+.empty-collection p{color:var(--color-ink-soft);margin:0 0 var(--space-4)}
+.empty-collection a{color:var(--color-teal);font-weight:var(--fw-semi);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1024px){.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.collection-grid{grid-template-columns:1fr}}
+</style>

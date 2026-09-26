@@ -1,0 +1,74 @@
+{
+  "primary": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Phones",
+      "href": "/phones",
+      "children": [
+        {
+          "label": "iPhone",
+          "href": "/phones/iphone"
+        },
+        {
+          "label": "Samsung",
+          "href": "/phones/samsung"
+        },
+        {
+          "label": "Google Pixel",
+          "href": "/phones/google-pixel"
+        }
+      ]
+    },
+    {
+      "label": "Computers",
+      "href": "/laptops",
+      "children": [
+        {
+          "label": "HP",
+          "href": "/computers/hp"
+        },
+        {
+          "label": "MacBook",
+          "href": "/computers/macbook"
+        },
+        {
+          "label": "Dell",
+          "href": "/computers/dell"
+        }
+      ]
+    },
+    {
+      "label": "Starlink",
+      "href": "/starlink"
+    },
+    {
+      "label": "Gadgets & Accessories",
+      "href": "/gaming",
+      "children": [
+        {
+          "label": "Consoles",
+          "href": "/gadgets/consoles"
+        },
+        {
+          "label": "Accessories",
+          "href": "/gadgets/accessories"
+        }
+      ]
+    },
+    {
+      "label": "Inside Donkams",
+      "href": "/#inside-donkams"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ]
+}

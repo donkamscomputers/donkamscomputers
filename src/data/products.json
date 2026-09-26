@@ -1,0 +1,2407 @@
+[
+    {
+        "slug":  "hp-elitebook-1030-g2-i5",
+        "path":  "/laptops/hp-elitebook-1030-g2",
+        "name":  "HP EliteBook 1030 G2 Core i5 7th Gen",
+        "brand":  "hp",
+        "category":  "laptops",
+        "shortDescription":  "HP EliteBook 1030 G2 with Core i5 7th generation processor, 256GB SSD and 8GB RAM.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used stock",
+                                         "Device tested before sale",
+                                         "Network/account lock checked where applicable",
+                                         "Battery health or condition checked before sale"
+                                     ],
+                          "note":  "Condition and availability are confirmed before purchase. Ask Donkams for current stock details.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  425000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 7th Generation"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.3-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard Â· fingerprint reader"
+                      },
+                      {
+                          "label":  "Included",
+                          "value":  "Original charger"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "HP EliteBook 1030 G2 with Core i5 7th generation processor, 256GB SSD and 8GB RAM. Contact Donkams Computers in Minna to confirm the exact unit, condition, storage, colour and current stock before visiting.",
+        "priceTo":  475000,
+        "description":  "HP EliteBook 1030 G2 with Core i5 7th generation processor, 256GB SSD and 8GB RAM. Contact Donkams Computers in Minna to confirm the exact unit, condition, storage, colour and current stock before visiting."
+    },
+    {
+        "slug":  "ps4-slim-500gb-2-pads",
+        "path":  "/gaming/consoles/ps4-slim-500gb",
+        "name":  "PS4 Slim 500GB + 2 New Pads",
+        "brand":  "sony",
+        "category":  "gaming",
+        "shortDescription":  "Open-box PS4 Slim 500GB with two new controllers and six games installed.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "Open Box / Tested",
+                          "points":  [
+                                         "Open-box unit, inspected and tested",
+                                         "500GB console storage",
+                                         "Two new compatible pads included",
+                                         "Six installed games as listed"
+                                     ],
+                          "note":  "Condition and availability are confirmed before purchase. Ask Donkams for current stock details.",
+                          "warranty":  "6-month Donkams warranty on qualifying stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  280000,
+        "specs":  [
+                      {
+                          "label":  "Storage",
+                          "value":  "500GB"
+                      },
+                      {
+                          "label":  "Controllers",
+                          "value":  "2 new pads"
+                      },
+                      {
+                          "label":  "Games installed",
+                          "value":  "6"
+                      },
+                      {
+                          "label":  "Games listed",
+                          "value":  "FC 25 Â· Mortal Kombat Â· God of War Â· GTA Â· Devil May Cry Â· Need for Speed"
+                      },
+                      {
+                          "label":  "Condition",
+                          "value":  "Open box"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  true,
+        "body":  "Open-box PS4 Slim 500GB with two new controllers and six games installed. Contact Donkams Computers in Minna to confirm the exact unit, condition, storage, colour and current stock before visiting.",
+        "priceTo":  320000,
+        "description":  "Open-box PS4 Slim 500GB with two new controllers and six games installed. Contact Donkams Computers in Minna to confirm the exact unit, condition, storage, colour and current stock before visiting."
+    },
+    {
+        "slug":  "iphone-12-128gb",
+        "path":  "/phones/iphone-12-128gb",
+        "name":  "iPhone 12 128GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 12 128GB for customers who want a compact modern iPhone with 5G, OLED display and Face ID.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  280000,
+        "priceTo":  350000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.1-inch Super Retina XDR OLED"
+                      },
+                      {
+                          "label":  "Chip",
+                          "value":  "A14 Bionic"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "128GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "Dual 12MP system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; Face ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  true,
+        "body":  "iPhone 12 128GB for customers who want a compact modern iPhone with 5G, OLED display and Face ID. Exact battery health and cosmetic grade are confirmed for the individual unit before purchase.",
+        "description":  "iPhone 12 128GB for customers who want a compact modern iPhone with 5G, OLED display and Face ID. Exact battery health and cosmetic grade are confirmed for the individual unit before purchase."
+    },
+    {
+        "slug":  "iphone-12-pro-256gb",
+        "path":  "/phones/iphone-12-pro-256gb",
+        "name":  "iPhone 12 Pro 256GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 12 Pro 256GB with stainless-steel design, OLED display and Pro camera system.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  360000,
+        "priceTo":  450000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.1-inch Super Retina XDR OLED"
+                      },
+                      {
+                          "label":  "Chip",
+                          "value":  "A14 Bionic"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "Pro triple 12MP system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; Face ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 12 Pro 256GB with stainless-steel design, OLED display and Pro camera system. Battery health, Face ID, True Tone and camera functions are checked before sale.",
+        "description":  "iPhone 12 Pro 256GB with stainless-steel design, OLED display and Pro camera system. Battery health, Face ID, True Tone and camera functions are checked before sale."
+    },
+    {
+        "slug":  "iphone-12-pro-max-256gb",
+        "path":  "/phones/iphone-12-pro-max-256gb",
+        "name":  "iPhone 12 Pro Max 256GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 12 Pro Max 256GB with large 6.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  400000,
+        "priceTo":  480000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.7-inch Super Retina XDR OLED"
+                      },
+                      {
+                          "label":  "Chip",
+                          "value":  "A14 Bionic"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "Pro triple 12MP system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; Face ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 12 Pro Max 256GB with large 6.7-inch OLED display and Pro camera system. Current unit pricing varies with battery health, screen/parts history and cosmetic grade; those details are confirmed before sale.",
+        "description":  "iPhone 12 Pro Max 256GB with large 6.7-inch OLED display and Pro camera system. Current unit pricing varies with battery health, screen/parts history and cosmetic grade; those details are confirmed before sale."
+    },
+    {
+        "slug":  "iphone-13-128gb",
+        "path":  "/phones/iphone-13-128gb",
+        "name":  "iPhone 13 128GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 13 128GB with A15 Bionic, 5G and Super Retina XDR display.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  390000,
+        "priceTo":  470000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.1-inch Super Retina XDR OLED"
+                      },
+                      {
+                          "label":  "Chip",
+                          "value":  "A15 Bionic"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "128GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "Dual 12MP system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; Face ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 13 128GB with A15 Bionic, 5G and Super Retina XDR display. Each used unit is tested for battery health, Face ID, cameras, speakers and charging.",
+        "description":  "iPhone 13 128GB with A15 Bionic, 5G and Super Retina XDR display. Each used unit is tested for battery health, Face ID, cameras, speakers and charging."
+    },
+    {
+        "slug":  "iphone-14-pro-max-128gb",
+        "path":  "/phones/iphone-14-pro-max-128gb",
+        "name":  "iPhone 14 Pro Max 128GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 14 Pro Max 128GB with 48MP main camera, Dynamic Island and 120Hz ProMotion display.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  650000,
+        "priceTo":  720000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.7-inch Super Retina XDR with ProMotion"
+                      },
+                      {
+                          "label":  "Chip",
+                          "value":  "A16 Bionic"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "128GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "48MP Main + Pro camera system"
+                      },
+                      {
+                          "label":  "Security",
+                          "value":  "Face ID; Dynamic Island"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 14 Pro Max 128GB with 48MP main camera, Dynamic Island and 120Hz ProMotion display. Exact battery health, SIM configuration and parts history are confirmed for each unit.",
+        "description":  "iPhone 14 Pro Max 128GB with 48MP main camera, Dynamic Island and 120Hz ProMotion display. Exact battery health, SIM configuration and parts history are confirmed for each unit."
+    },
+    {
+        "slug":  "iphone-14-pro-max-256gb",
+        "path":  "/phones/iphone-14-pro-max-256gb",
+        "name":  "iPhone 14 Pro Max 256GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 14 Pro Max 256GB with ProMotion, Dynamic Island and 48MP main camera.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  690000,
+        "priceTo":  780000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.7-inch Super Retina XDR with ProMotion"
+                      },
+                      {
+                          "label":  "Chip",
+                          "value":  "A16 Bionic"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "48MP Main + Pro camera system"
+                      },
+                      {
+                          "label":  "Security",
+                          "value":  "Face ID; Dynamic Island"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 14 Pro Max 256GB with ProMotion, Dynamic Island and 48MP main camera. Battery health, display, cameras, Face ID and SIM configuration are checked before purchase.",
+        "description":  "iPhone 14 Pro Max 256GB with ProMotion, Dynamic Island and 48MP main camera. Battery health, display, cameras, Face ID and SIM configuration are checked before purchase."
+    },
+    {
+        "slug":  "iphone-15-pro-max-256gb",
+        "path":  "/phones/iphone-15-pro-max-256gb",
+        "name":  "iPhone 15 Pro Max 256GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 15 Pro Max 256GB with titanium design, A17 Pro, USB-C and 5x optical zoom.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  850000,
+        "priceTo":  1000000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.7-inch Super Retina XDR with ProMotion"
+                      },
+                      {
+                          "label":  "Chip",
+                          "value":  "A17 Pro"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "48MP Main + Pro camera system"
+                      },
+                      {
+                          "label":  "Build",
+                          "value":  "Titanium design; USB-C"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 15 Pro Max 256GB with titanium design, A17 Pro, USB-C and 5x optical zoom. Exact battery health, cycle count and cosmetic grade are confirmed for the individual unit.",
+        "description":  "iPhone 15 Pro Max 256GB with titanium design, A17 Pro, USB-C and 5x optical zoom. Exact battery health, cycle count and cosmetic grade are confirmed for the individual unit."
+    },
+    {
+        "slug":  "iphone-16-128gb",
+        "path":  "/phones/iphone-16-128gb",
+        "name":  "iPhone 16 128GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 16 128GB with A18 chip, 48MP Fusion camera and USB-C.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  850000,
+        "priceTo":  920000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.1-inch Super Retina XDR OLED"
+                      },
+                      {
+                          "label":  "Chip",
+                          "value":  "A18"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "128GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "48MP Fusion camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; USB-C"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 16 128GB with A18 chip, 48MP Fusion camera and USB-C. Current units are offered according to battery health, SIM configuration and cosmetic condition.",
+        "description":  "iPhone 16 128GB with A18 chip, 48MP Fusion camera and USB-C. Current units are offered according to battery health, SIM configuration and cosmetic condition."
+    },
+    {
+        "slug":  "iphone-16-plus-256gb",
+        "path":  "/phones/iphone-16-plus-256gb",
+        "name":  "iPhone 16 Plus 256GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 16 Plus 256GB with large 6.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  950000,
+        "priceTo":  1050000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.7-inch Super Retina XDR OLED"
+                      },
+                      {
+                          "label":  "Chip",
+                          "value":  "A18"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "48MP Fusion camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; USB-C"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 16 Plus 256GB with large 6.7-inch display, A18 chip and 48MP Fusion camera. Battery health and exact SIM configuration are confirmed for each available unit.",
+        "description":  "iPhone 16 Plus 256GB with large 6.7-inch display, A18 chip and 48MP Fusion camera. Battery health and exact SIM configuration are confirmed for each available unit."
+    },
+    {
+        "slug":  "iphone-17-256gb",
+        "path":  "/phones/iphone-17-256gb",
+        "name":  "iPhone 17 256GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 17 256GB.",
+        "image":  "/images/iphone17-1.webp",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "New",
+                          "label":  "New",
+                          "points":  [
+                                         "Brand New",
+                                         "Original and unused",
+                                         "Factory sealed",
+                                         "Available in selected colours and storage options",
+                                         "Comes with charger and accessories"
+                                     ],
+                          "note":  "Brand-new device supplied in original packaging. Customers can inspect the device before payment.",
+                          "warranty":  "12-month warranty on New stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  990000,
+        "priceTo":  1100000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.3-inch class Super Retina display"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; USB-C"
+                      },
+                      {
+                          "label":  "Condition",
+                          "value":  "Boxed stock subject to availability"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 17 256GB. Brand-new and unused, supplied in original packaging with the specified storage and colour options. Warranty included.",
+        "description":  "iPhone 17 256GB. Brand-new and unused, supplied in original packaging with the specified storage and colour options. Warranty included."
+    },
+    {
+        "slug":  "iphone-17-pro-256gb",
+        "path":  "/phones/iphone-17-pro-256gb",
+        "name":  "iPhone 17 Pro 256GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 17 Pro 256GB.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  1500000,
+        "priceTo":  1700000,
+        "specs":  [
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "Pro-class Super Retina display"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "Pro camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; USB-C"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 17 Pro 256GB. Box condition, battery health, cycle count and SIM configuration are confirmed against the exact unit in stock.",
+        "description":  "iPhone 17 Pro 256GB. Box condition, battery health, cycle count and SIM configuration are confirmed against the exact unit in stock."
+    },
+    {
+        "slug":  "iphone-17-pro-max-256gb",
+        "path":  "/phones/iphone-17-pro-max-256gb",
+        "name":  "iPhone 17 Pro Max 256GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 17 Pro Max 256GB.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "new",
+                          "label":  "Brand New",
+                          "points":  [
+                                         "Factory sealed where sold as brand new",
+                                         "Original accessories included",
+                                         "Device condition and warranty confirmed before sale",
+                                         "Eligible for applicable manufacturer/seller warranty service"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "12-month warranty on qualifying new stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  1500000,
+        "priceTo":  1750000,
+        "specs":  [
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "Pro Max Super Retina display"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "Pro camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; USB-C"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 17 Pro Max 256GB. Availability and regional SIM configuration vary by stock; contact Donkams for the exact sealed or boxed unit available.",
+        "description":  "iPhone 17 Pro Max 256GB. Availability and regional SIM configuration vary by stock; contact Donkams for the exact sealed or boxed unit available."
+    },
+    {
+        "slug":  "iphone-17-pro-max-512gb",
+        "path":  "/phones/iphone-17-pro-max-512gb",
+        "name":  "iPhone 17 Pro Max 512GB",
+        "brand":  "apple",
+        "category":  "phones",
+        "shortDescription":  "iPhone 17 Pro Max 512GB.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "new",
+                          "label":  "Brand New",
+                          "points":  [
+                                         "Factory sealed where sold as brand new",
+                                         "Original accessories included",
+                                         "Device condition and warranty confirmed before sale",
+                                         "Eligible for applicable manufacturer/seller warranty service"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "12-month warranty on qualifying new stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  1650000,
+        "priceTo":  1850000,
+        "specs":  [
+                      {
+                          "label":  "Storage",
+                          "value":  "512GB"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "Pro Max Super Retina display"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "Pro camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; USB-C"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "iPhone 17 Pro Max 512GB. Exact colour, SIM configuration and warranty status are confirmed for the available unit before purchase.",
+        "description":  "iPhone 17 Pro Max 512GB. Exact colour, SIM configuration and warranty status are confirmed for the available unit before purchase."
+    },
+    {
+        "slug":  "samsung-s21-128gb",
+        "path":  "/phones/samsung-s21-128gb",
+        "name":  "Samsung Galaxy S21 128GB",
+        "brand":  "samsung",
+        "category":  "phones",
+        "shortDescription":  "Galaxy S21 128GB for customers looking for a compact flagship with a 120Hz AMOLED display and 5G.",
+        "image":  "/images/samsung21-1.webp",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  220000,
+        "priceTo":  280000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.2-inch Dynamic AMOLED 2X, 120Hz"
+                      },
+                      {
+                          "label":  "Processor",
+                          "value":  "Exynos 2100 / Snapdragon variant"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "128GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "Triple rear camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Galaxy S21 128GB for customers looking for a compact flagship with a 120Hz AMOLED display and 5G.",
+        "description":  "Galaxy S21 128GB for customers looking for a compact flagship with a 120Hz AMOLED display and 5G."
+    },
+    {
+        "slug":  "samsung-s21-fe-128gb",
+        "path":  "/phones/samsung-s21-fe-128gb",
+        "name":  "Samsung Galaxy S21 FE 128GB",
+        "brand":  "samsung",
+        "category":  "phones",
+        "shortDescription":  "Galaxy S21 FE 128GB with a large 120Hz AMOLED display, 5G and flagship-style camera system.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  220000,
+        "priceTo":  300000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.4-inch Dynamic AMOLED 2X, 120Hz"
+                      },
+                      {
+                          "label":  "Processor",
+                          "value":  "Snapdragon / Exynos variant"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "128GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "Triple rear camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Galaxy S21 FE 128GB with a large 120Hz AMOLED display, 5G and flagship-style camera system.",
+        "description":  "Galaxy S21 FE 128GB with a large 120Hz AMOLED display, 5G and flagship-style camera system."
+    },
+    {
+        "slug":  "samsung-s22-128gb",
+        "path":  "/phones/samsung-s22-128gb",
+        "name":  "Samsung Galaxy S22 128GB",
+        "brand":  "samsung",
+        "category":  "phones",
+        "shortDescription":  "Galaxy S22 128GB.",
+        "image":  "/images/samsung22-1.webp",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  260000,
+        "priceTo":  330000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.1-inch Dynamic AMOLED 2X, 120Hz"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "128GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "50MP main camera"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; SIM configuration varies by region"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Galaxy S22 128GB. Box condition, SIM configuration and exact cosmetic grade vary by unit and are confirmed before purchase.",
+        "description":  "Galaxy S22 128GB. Box condition, SIM configuration and exact cosmetic grade vary by unit and are confirmed before purchase."
+    },
+    {
+        "slug":  "samsung-s23-ultra-256gb",
+        "path":  "/phones/samsung-s23-ultra-256gb",
+        "name":  "Samsung Galaxy S23 Ultra 256GB",
+        "brand":  "samsung",
+        "category":  "phones",
+        "shortDescription":  "Galaxy S23 Ultra 256GB with Snapdragon 8 Gen 2 for Galaxy, 200MP camera and built-in S Pen.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  600000,
+        "priceTo":  725000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.8-inch QHD+ Dynamic AMOLED 2X, 120Hz"
+                      },
+                      {
+                          "label":  "Processor",
+                          "value":  "Snapdragon 8 Gen 2 for Galaxy"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "12GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "200MP quad camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; S Pen"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Galaxy S23 Ultra 256GB with Snapdragon 8 Gen 2 for Galaxy, 200MP camera and built-in S Pen. Exact condition, battery performance and regional SIM configuration are confirmed for each unit.",
+        "description":  "Galaxy S23 Ultra 256GB with Snapdragon 8 Gen 2 for Galaxy, 200MP camera and built-in S Pen. Exact condition, battery performance and regional SIM configuration are confirmed for each unit."
+    },
+    {
+        "slug":  "samsung-s24-ultra-256gb",
+        "path":  "/phones/samsung-s24-ultra-256gb",
+        "name":  "Samsung Galaxy S24 Ultra 256GB",
+        "brand":  "samsung",
+        "category":  "phones",
+        "shortDescription":  "Galaxy S24 Ultra 256GB with titanium design, Snapdragon 8 Gen 3 for Galaxy, 200MP camera and S Pen.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "new",
+                          "label":  "Brand New",
+                          "points":  [
+                                         "Factory sealed where sold as brand new",
+                                         "Original accessories included",
+                                         "Device condition and warranty confirmed before sale",
+                                         "Eligible for applicable manufacturer/seller warranty service"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "12-month warranty on qualifying new stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  920000,
+        "priceTo":  990000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "6.8-inch QHD+ Dynamic AMOLED 2X, 120Hz"
+                      },
+                      {
+                          "label":  "Processor",
+                          "value":  "Snapdragon 8 Gen 3 for Galaxy"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "12GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "200MP quad camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; S Pen"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Galaxy S24 Ultra 256GB with titanium design, Snapdragon 8 Gen 3 for Galaxy, 200MP camera and S Pen. Current Lagos listings support a range around this level depending on exact variant and seller.",
+        "description":  "Galaxy S24 Ultra 256GB with titanium design, Snapdragon 8 Gen 3 for Galaxy, 200MP camera and S Pen. Current Lagos listings support a range around this level depending on exact variant and seller."
+    },
+    {
+        "slug":  "samsung-s25-ultra-256gb",
+        "path":  "/phones/samsung-s25-ultra-256gb",
+        "name":  "Samsung Galaxy S25 Ultra 256GB",
+        "brand":  "samsung",
+        "category":  "phones",
+        "shortDescription":  "Galaxy S25 Ultra 256GB flagship smartphone.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "new",
+                          "label":  "Brand New",
+                          "points":  [
+                                         "Factory sealed where sold as brand new",
+                                         "Original accessories included",
+                                         "Device condition and warranty confirmed before sale",
+                                         "Eligible for applicable manufacturer/seller warranty service"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "12-month warranty on qualifying new stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  1000000,
+        "priceTo":  1150000,
+        "specs":  [
+                      {
+                          "label":  "Display",
+                          "value":  "Dynamic LTPO AMOLED 2X"
+                      },
+                      {
+                          "label":  "Processor",
+                          "value":  "Snapdragon 8 Elite for Galaxy"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "12GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB"
+                      },
+                      {
+                          "label":  "Camera",
+                          "value":  "200MP multi-camera system"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "5G; S Pen"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Galaxy S25 Ultra 256GB flagship smartphone. Exact regional SIM configuration, colour and warranty status are confirmed for the available sealed unit.",
+        "description":  "Galaxy S25 Ultra 256GB flagship smartphone. Exact regional SIM configuration, colour and warranty status are confirmed for the available sealed unit."
+    },
+    {
+        "slug":  "hp-elitebook-x360-1030-g7-i5",
+        "path":  "/laptops/hp-elitebook-x360-1030-g7",
+        "name":  "HP EliteBook x360 1030 G7 Core i5 10th Gen",
+        "brand":  "hp",
+        "category":  "laptops",
+        "shortDescription":  "HP EliteBook x360 1030 G7 Core i5 with 8GB RAM and 256GB SSD. A premium 2-in-1 convertible business laptop.",
+        "image":  "/images/1030g7.webp",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, touchscreen, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  480000,
+        "priceTo":  500000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 10th Gen (1.6 GHz)"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13-inch Touchscreen"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "2-in-1 Convertible; Backlit keyboard; Windows 11 Pro"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "HP EliteBook x360 1030 G7 Core i5 with 8GB RAM and 256GB SSD. A premium, versatile 2-in-1 convertible business laptop for office work, school and everyday productivity.",
+        "description":  "HP EliteBook x360 1030 G7 Core i5 with 8GB RAM and 256GB SSD. A premium, versatile 2-in-1 convertible business laptop for office work, school and everyday productivity."
+    },
+    {
+        "slug":  "hp-elitebook-840-g6-i5",
+        "path":  "/laptops/hp-elitebook-840-g6",
+        "name":  "HP EliteBook 840 G6 Core i5 8th Gen",
+        "brand":  "hp",
+        "category":  "laptops",
+        "shortDescription":  "HP EliteBook 840 G6 Core i5 8th Gen with 8GB RAM and 256GB SSD.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  300000,
+        "priceTo":  360000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 8th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "14-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard; fingerprint reader; optional touchscreen"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "HP EliteBook 840 G6 Core i5 8th Gen with 8GB RAM and 256GB SSD. Current Lagos listings show approximately â‚¦282,000â€“â‚¦360,000 for used configurations, with touchscreen and i7 variants higher.",
+        "description":  "HP EliteBook 840 G6 Core i5 8th Gen with 8GB RAM and 256GB SSD. Current Lagos listings show approximately â‚¦282,000â€“â‚¦360,000 for used configurations, with touchscreen and i7 variants higher."
+    },
+    {
+        "slug":  "hp-elitebook-840-g7-i5",
+        "path":  "/laptops/hp-elitebook-840-g7",
+        "name":  "HP EliteBook 840 G7 Core i5 10th Gen",
+        "brand":  "hp",
+        "category":  "laptops",
+        "shortDescription":  "HP EliteBook 840 G7 Core i5 10th Gen with 8GB RAM and 256GB SSD.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  350000,
+        "priceTo":  450000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 10th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "14-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard; fingerprint reader"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "HP EliteBook 840 G7 Core i5 10th Gen with 8GB RAM and 256GB SSD. Suitable for business, study and mobile productivity.",
+        "description":  "HP EliteBook 840 G7 Core i5 10th Gen with 8GB RAM and 256GB SSD. Suitable for business, study and mobile productivity."
+    },
+    {
+        "slug":  "hp-elitebook-840-g8-i5",
+        "path":  "/laptops/hp-elitebook-840-g8",
+        "name":  "HP EliteBook 840 G8 Core i5 11th Gen",
+        "brand":  "hp",
+        "category":  "laptops",
+        "shortDescription":  "HP EliteBook 840 G8 Core i5 11th Gen.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  360000,
+        "priceTo":  500000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 11th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB / 16GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "14-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard; fingerprint reader; touchscreen on selected units"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "HP EliteBook 840 G8 Core i5 11th Gen. Current Lagos listings include 8GB/256GB around â‚¦360,000 and 16GB/touchscreen configurations around â‚¦430,000â€“â‚¦500,000.",
+        "description":  "HP EliteBook 840 G8 Core i5 11th Gen. Current Lagos listings include 8GB/256GB around â‚¦360,000 and 16GB/touchscreen configurations around â‚¦430,000â€“â‚¦500,000."
+    },
+    {
+        "slug":  "hp-elitebook-840-g9-i5",
+        "path":  "/laptops/hp-elitebook-840-g9",
+        "name":  "HP EliteBook 840 G9 Core i5 12th Gen",
+        "brand":  "hp",
+        "category":  "laptops",
+        "shortDescription":  "HP EliteBook 840 G9 Core i5 12th Gen with modern business-class performance.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  550000,
+        "priceTo":  700000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 12th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "16GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB / 512GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "14-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard; fingerprint reader"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "HP EliteBook 840 G9 Core i5 12th Gen with modern business-class performance. Exact RAM, SSD and display configuration varies by unit.",
+        "description":  "HP EliteBook 840 G9 Core i5 12th Gen with modern business-class performance. Exact RAM, SSD and display configuration varies by unit."
+    },
+    {
+        "slug":  "hp-elitebook-830-g6-i5",
+        "path":  "/laptops/hp-elitebook-830-g6",
+        "name":  "HP EliteBook 830 G6 Core i5 8th Gen",
+        "brand":  "hp",
+        "category":  "laptops",
+        "shortDescription":  "HP EliteBook 830 G6 Core i5 8th Gen, 8GB/256GB.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  380000,
+        "priceTo":  420000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 8th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.3-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard; touchscreen on selected units"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "HP EliteBook 830 G6 Core i5 8th Gen, 8GB/256GB. Current Lagos listings place this configuration around â‚¦380,000â€“â‚¦405,000 depending on condition and touchscreen.",
+        "description":  "HP EliteBook 830 G6 Core i5 8th Gen, 8GB/256GB. Current Lagos listings place this configuration around â‚¦380,000â€“â‚¦405,000 depending on condition and touchscreen."
+    },
+    {
+        "slug":  "hp-probook-440-g7-i5",
+        "path":  "/laptops/hp-probook-440-g7",
+        "name":  "HP ProBook 440 G7 Core i5 10th Gen",
+        "brand":  "hp",
+        "category":  "laptops",
+        "shortDescription":  "HP ProBook 440 G7 Core i5 10th Gen for office, school and general productivity.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  280000,
+        "priceTo":  380000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 10th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "14-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Business keyboard; webcam; Wi-Fi"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "HP ProBook 440 G7 Core i5 10th Gen for office, school and general productivity.",
+        "description":  "HP ProBook 440 G7 Core i5 10th Gen for office, school and general productivity."
+    },
+    {
+        "slug":  "hp-zbook-firefly-14-g8",
+        "path":  "/laptops/hp-zbook-firefly-14-g8",
+        "name":  "HP ZBook Firefly 14 G8 Core i5 11th Gen",
+        "brand":  "hp",
+        "category":  "laptops",
+        "shortDescription":  "HP ZBook Firefly 14 G8 Core i5 11th Gen.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  500000,
+        "priceTo":  560000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 11th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB / 16GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB / 512GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "14-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Workstation-class business laptop; backlit keyboard"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "HP ZBook Firefly 14 G8 Core i5 11th Gen. Current Lagos listings show roughly â‚¦520,000â€“â‚¦535,000 for 8GB/256GB and 16GB/512GB configurations.",
+        "description":  "HP ZBook Firefly 14 G8 Core i5 11th Gen. Current Lagos listings show roughly â‚¦520,000â€“â‚¦535,000 for 8GB/256GB and 16GB/512GB configurations."
+    },
+    {
+        "slug":  "dell-latitude-3330-i3",
+        "path":  "/laptops/dell-latitude-3330",
+        "name":  "Dell Latitude 3330 Core i3",
+        "brand":  "dell",
+        "category":  "laptops",
+        "shortDescription":  "Dell Latitude 3330.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  140000,
+        "priceTo":  220000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i3 / i5 depending unit"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "4GB / 8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "SSD / HDD depending unit"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.3-inch class"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Compact business laptop"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Dell Latitude 3330. Because listings vary significantly by generation and storage, the exact processor, RAM, storage and condition are confirmed against the unit in stock before purchase.",
+        "description":  "Dell Latitude 3330. Because listings vary significantly by generation and storage, the exact processor, RAM, storage and condition are confirmed against the unit in stock before purchase."
+    },
+    {
+        "slug":  "dell-latitude-5300-i5",
+        "path":  "/laptops/dell-latitude-5300",
+        "name":  "Dell Latitude 5300 Core i5 8th Gen",
+        "brand":  "dell",
+        "category":  "laptops",
+        "shortDescription":  "Dell Latitude 5300 Core i5 8th Gen with 8GB RAM and 256GB SSD.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  250000,
+        "priceTo":  350000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 8th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.3-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard; business-class ports"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Dell Latitude 5300 Core i5 8th Gen with 8GB RAM and 256GB SSD.",
+        "description":  "Dell Latitude 5300 Core i5 8th Gen with 8GB RAM and 256GB SSD."
+    },
+    {
+        "slug":  "dell-latitude-5300-x360-i5",
+        "path":  "/laptops/dell-latitude-5300-x360",
+        "name":  "Dell Latitude 5300 x360 Core i5 8th Gen",
+        "brand":  "dell",
+        "category":  "laptops",
+        "shortDescription":  "Dell Latitude 5300 x360 2-in-1 Core i5 8th Gen with touchscreen and 360-degree hinge.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  300000,
+        "priceTo":  380000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 8th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.3-inch Full HD touchscreen"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "360-degree convertible; backlit keyboard"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Dell Latitude 5300 x360 2-in-1 Core i5 8th Gen with touchscreen and 360-degree hinge.",
+        "description":  "Dell Latitude 5300 x360 2-in-1 Core i5 8th Gen with touchscreen and 360-degree hinge."
+    },
+    {
+        "slug":  "dell-latitude-7310-i5",
+        "path":  "/laptops/dell-latitude-7310",
+        "name":  "Dell Latitude 7310 Core i5 10th Gen",
+        "brand":  "dell",
+        "category":  "laptops",
+        "shortDescription":  "Dell Latitude 7310 Core i5 10th Gen with 8GB RAM and 256GB SSD.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  320000,
+        "priceTo":  420000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 10th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.3-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard; premium business build"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Dell Latitude 7310 Core i5 10th Gen with 8GB RAM and 256GB SSD.",
+        "description":  "Dell Latitude 7310 Core i5 10th Gen with 8GB RAM and 256GB SSD."
+    },
+    {
+        "slug":  "dell-latitude-7410-i5",
+        "path":  "/laptops/dell-latitude-7410",
+        "name":  "Dell Latitude 7410 Core i5 10th Gen",
+        "brand":  "dell",
+        "category":  "laptops",
+        "shortDescription":  "Dell Latitude 7410 Core i5 10th Gen with 8GB RAM and 256GB SSD.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  330000,
+        "priceTo":  430000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i5 10th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "14-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard; premium business build"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Dell Latitude 7410 Core i5 10th Gen with 8GB RAM and 256GB SSD.",
+        "description":  "Dell Latitude 7410 Core i5 10th Gen with 8GB RAM and 256GB SSD."
+    },
+    {
+        "slug":  "dell-latitude-7420-i7",
+        "path":  "/laptops/dell-latitude-7420",
+        "name":  "Dell Latitude 7420 Core i7 11th Gen",
+        "brand":  "dell",
+        "category":  "laptops",
+        "shortDescription":  "Dell Latitude 7420 Core i7 11th Gen with 16GB RAM and 512GB SSD.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  450000,
+        "priceTo":  550000,
+        "specs":  [
+                      {
+                          "label":  "Processor",
+                          "value":  "Intel Core i7-1185G7 11th Gen"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "16GB RAM"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "512GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "14-inch Full HD"
+                      },
+                      {
+                          "label":  "Features",
+                          "value":  "Backlit keyboard; premium business build"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Dell Latitude 7420 Core i7 11th Gen with 16GB RAM and 512GB SSD. Current Lagos listings include around â‚¦500,000 for this type of configuration.",
+        "description":  "Dell Latitude 7420 Core i7 11th Gen with 16GB RAM and 512GB SSD. Current Lagos listings include around â‚¦500,000 for this type of configuration."
+    },
+    {
+        "slug":  "macbook-air-m1-8-256",
+        "path":  "/laptops/macbook-air-m1-8gb-256gb",
+        "name":  "MacBook Air M1 8GB/256GB",
+        "brand":  "apple",
+        "category":  "laptops",
+        "shortDescription":  "MacBook Air M1 8GB/256GB for work, school, browsing and creative tasks.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  550000,
+        "priceTo":  700000,
+        "specs":  [
+                      {
+                          "label":  "Chip",
+                          "value":  "Apple M1"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB unified memory"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.3-inch Retina"
+                      },
+                      {
+                          "label":  "Security",
+                          "value":  "Touch ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "MacBook Air M1 8GB/256GB for work, school, browsing and creative tasks. Current Lagos listings commonly fall around â‚¦550,000â€“â‚¦700,000 depending on battery health and cosmetic grade.",
+        "description":  "MacBook Air M1 8GB/256GB for work, school, browsing and creative tasks. Current Lagos listings commonly fall around â‚¦550,000â€“â‚¦700,000 depending on battery health and cosmetic grade."
+    },
+    {
+        "slug":  "macbook-air-m1-16-512",
+        "path":  "/laptops/macbook-air-m1-16gb-512gb",
+        "name":  "MacBook Air M1 16GB/512GB",
+        "brand":  "apple",
+        "category":  "laptops",
+        "shortDescription":  "MacBook Air M1 16GB/512GB with additional memory and storage for heavier multitasking.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  750000,
+        "priceTo":  850000,
+        "specs":  [
+                      {
+                          "label":  "Chip",
+                          "value":  "Apple M1"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "16GB unified memory"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "512GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.3-inch Retina"
+                      },
+                      {
+                          "label":  "Security",
+                          "value":  "Touch ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "MacBook Air M1 16GB/512GB with additional memory and storage for heavier multitasking.",
+        "description":  "MacBook Air M1 16GB/512GB with additional memory and storage for heavier multitasking."
+    },
+    {
+        "slug":  "macbook-air-m2-8-256",
+        "path":  "/laptops/macbook-air-m2-8gb-256gb",
+        "name":  "MacBook Air M2 8GB/256GB",
+        "brand":  "apple",
+        "category":  "laptops",
+        "shortDescription":  "MacBook Air M2 8GB/256GB with redesigned chassis, Liquid Retina display and MagSafe charging.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  850000,
+        "priceTo":  1000000,
+        "specs":  [
+                      {
+                          "label":  "Chip",
+                          "value":  "Apple M2"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB unified memory"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.6-inch Liquid Retina"
+                      },
+                      {
+                          "label":  "Security",
+                          "value":  "Touch ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "MacBook Air M2 8GB/256GB with redesigned chassis, Liquid Retina display and MagSafe charging.",
+        "description":  "MacBook Air M2 8GB/256GB with redesigned chassis, Liquid Retina display and MagSafe charging."
+    },
+    {
+        "slug":  "macbook-air-m2-16-512",
+        "path":  "/laptops/macbook-air-m2-16gb-512gb",
+        "name":  "MacBook Air M2 16GB/512GB",
+        "brand":  "apple",
+        "category":  "laptops",
+        "shortDescription":  "MacBook Air M2 16GB/512GB for users who need more memory and storage.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  1000000,
+        "priceTo":  1250000,
+        "specs":  [
+                      {
+                          "label":  "Chip",
+                          "value":  "Apple M2"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "16GB unified memory"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "512GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.6-inch Liquid Retina"
+                      },
+                      {
+                          "label":  "Security",
+                          "value":  "Touch ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "MacBook Air M2 16GB/512GB for users who need more memory and storage.",
+        "description":  "MacBook Air M2 16GB/512GB for users who need more memory and storage."
+    },
+    {
+        "slug":  "macbook-air-m3-8-256",
+        "path":  "/laptops/macbook-air-m3-8gb-256gb",
+        "name":  "MacBook Air M3 8GB/256GB",
+        "brand":  "apple",
+        "category":  "laptops",
+        "shortDescription":  "MacBook Air M3 8GB/256GB.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  950000,
+        "priceTo":  1250000,
+        "specs":  [
+                      {
+                          "label":  "Chip",
+                          "value":  "Apple M3"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "8GB unified memory"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "256GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.6-inch Liquid Retina"
+                      },
+                      {
+                          "label":  "Security",
+                          "value":  "Touch ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "MacBook Air M3 8GB/256GB. Price varies significantly between used, open-box and brand-new stock.",
+        "description":  "MacBook Air M3 8GB/256GB. Price varies significantly between used, open-box and brand-new stock."
+    },
+    {
+        "slug":  "macbook-air-m3-16-512",
+        "path":  "/laptops/macbook-air-m3-16gb-512gb",
+        "name":  "MacBook Air M3 16GB/512GB",
+        "brand":  "apple",
+        "category":  "laptops",
+        "shortDescription":  "MacBook Air M3 16GB/512GB for heavier productivity, development and creative workloads.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "UK Used",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  1100000,
+        "priceTo":  1400000,
+        "specs":  [
+                      {
+                          "label":  "Chip",
+                          "value":  "Apple M3"
+                      },
+                      {
+                          "label":  "Memory",
+                          "value":  "16GB unified memory"
+                      },
+                      {
+                          "label":  "Storage",
+                          "value":  "512GB SSD"
+                      },
+                      {
+                          "label":  "Display",
+                          "value":  "13.6-inch Liquid Retina"
+                      },
+                      {
+                          "label":  "Security",
+                          "value":  "Touch ID"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "MacBook Air M3 16GB/512GB for heavier productivity, development and creative workloads.",
+        "description":  "MacBook Air M3 16GB/512GB for heavier productivity, development and creative workloads."
+    },
+    {
+        "slug":  "starlink-standard-gen4",
+        "path":  "/starlink/standard-kit",
+        "name":  "Starlink Standard Kit",
+        "brand":  "starlink",
+        "category":  "starlink",
+        "shortDescription":  "Starlink Standard Kit for reliable satellite internet where terrestrial broadband is limited.",
+        "image":  "/images/starlink-1.webp",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "new",
+                          "label":  "Brand New",
+                          "points":  [
+                                         "Factory sealed where sold as brand new",
+                                         "Original accessories included",
+                                         "Device condition and warranty confirmed before sale",
+                                         "Eligible for applicable manufacturer/seller warranty service"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "12-month warranty on qualifying new stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  600000,
+        "priceTo":  700000,
+        "specs":  [
+                      {
+                          "label":  "Kit",
+                          "value":  "Standard Starlink hardware"
+                      },
+                      {
+                          "label":  "Connectivity",
+                          "value":  "Low-latency satellite internet"
+                      },
+                      {
+                          "label":  "Setup",
+                          "value":  "Self-install with clear sky view"
+                      },
+                      {
+                          "label":  "Use",
+                          "value":  "Home, office and business connectivity"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Starlink Standard Kit for reliable satellite internet where terrestrial broadband is limited. Exact generation and bundle contents are confirmed for the available unit.",
+        "description":  "Starlink Standard Kit for reliable satellite internet where terrestrial broadband is limited. Exact generation and bundle contents are confirmed for the available unit."
+    },
+    {
+        "slug":  "starlink-mini",
+        "path":  "/starlink/mini",
+        "name":  "Starlink Mini",
+        "brand":  "starlink",
+        "category":  "starlink",
+        "shortDescription":  "Starlink Mini is the compact portable option for users who want satellite connectivity in a smaller form factor.",
+        "image":  "/images/starlink-2.webp",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "new",
+                          "label":  "Brand New",
+                          "points":  [
+                                         "Factory sealed where sold as brand new",
+                                         "Original accessories included",
+                                         "Device condition and warranty confirmed before sale",
+                                         "Eligible for applicable manufacturer/seller warranty service"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "12-month warranty on qualifying new stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  400000,
+        "priceTo":  500000,
+        "specs":  [
+                      {
+                          "label":  "Kit",
+                          "value":  "Compact Starlink Mini hardware"
+                      },
+                      {
+                          "label":  "Power",
+                          "value":  "Portable power options"
+                      },
+                      {
+                          "label":  "Setup",
+                          "value":  "Self-install"
+                      },
+                      {
+                          "label":  "Use",
+                          "value":  "Home, travel and backup connectivity"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Starlink Mini is the compact portable option for users who want satellite connectivity in a smaller form factor.",
+        "description":  "Starlink Mini is the compact portable option for users who want satellite connectivity in a smaller form factor."
+    },
+    {
+        "slug":  "playstation-5",
+        "path":  "/gaming/consoles/playstation-5",
+        "name":  "PlayStation 5",
+        "brand":  "sony",
+        "category":  "gaming",
+        "shortDescription":  "Sony PlayStation 5 console.",
+        "image":  "/images/product-placeholder.svg",
+        "gallery":  [
+
+                    ],
+        "condition":  {
+                          "type":  "uk-used",
+                          "label":  "Used / Tested",
+                          "points":  [
+                                         "UK used, inspected and tested",
+                                         "Battery health checked",
+                                         "Keyboard, display, ports and connectivity tested",
+                                         "Includes compatible/original charger"
+                                     ],
+                          "note":  "Every device is inspected and tested before it goes on the shelf. If it does not pass our checks, we do not sell it.",
+                          "warranty":  "6-month Donkams warranty on UK-used stock"
+                      },
+        "availability":  "available",
+        "priceFrom":  800000,
+        "priceTo":  950000,
+        "specs":  [
+                      {
+                          "label":  "Storage",
+                          "value":  "825GB / 1TB SSD depending edition"
+                      },
+                      {
+                          "label":  "Resolution",
+                          "value":  "Up to 4K"
+                      },
+                      {
+                          "label":  "Controller",
+                          "value":  "DualSense wireless controller"
+                      },
+                      {
+                          "label":  "Compatibility",
+                          "value":  "PS4 game compatibility"
+                      }
+                  ],
+        "options":  [
+
+                    ],
+        "featured":  false,
+        "body":  "Sony PlayStation 5 console. Disc/digital edition, storage capacity, controller count and cosmetic condition vary by stock and are confirmed before purchase.",
+        "description":  "Sony PlayStation 5 console. Disc/digital edition, storage capacity, controller count and cosmetic condition vary by stock and are confirmed before purchase."
+    }
+]
