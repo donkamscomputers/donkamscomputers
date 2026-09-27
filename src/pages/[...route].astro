@@ -3,70 +3,222 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 import products from '../data/products.json';
 
-const collections = {
-  'phones/iphone': { title: 'iPhone', category: 'phones', brand: 'apple' },
-  'phones/samsung': { title: 'Samsung', category: 'phones', brand: 'samsung' },
-  'phones/google-pixel': { title: 'Google Pixel', category: 'phones', brand: 'google-pixel' },
-  'computers/hp': { title: 'HP Laptops', category: 'laptops', brand: 'hp' },
-  'computers/macbook': { title: 'MacBook', category: 'laptops', brand: 'apple' },
-  'computers/dell': { title: 'Dell Laptops', category: 'laptops', brand: 'dell' },
-  'gadgets/consoles': { title: 'Consoles', category: 'gaming' },
-  'gadgets/accessories': { title: 'Accessories', category: 'accessories' },
-};
-
 export function getStaticPaths() {
-  return Object.keys(collections).map((route) => ({ params: { route } }));
+  return [
+    { params: { route: 'phones/iphone' } },
+    { params: { route: 'phones/samsung' } },
+    { params: { route: 'phones/google-pixel' } },
+    { params: { route: 'computers/hp' } },
+    { params: { route: 'computers/macbook' } },
+    { params: { route: 'computers/dell' } },
+    { params: { route: 'starlink' } },
+    { params: { route: 'gadgets/consoles' } },
+    { params: { route: 'gadgets/accessories' } },
+  ];
 }
+
+const collections = {
+  'phones/iphone': {
+    title: 'iPhones in Minna',
+    category: 'phones',
+    brand: 'apple',
+    description:
+      'Browse iPhones available from Donkams Computers in Minna, including new and UK-used models. Contact us to confirm current stock, condition and pricing.',
+  },
+
+  'phones/samsung': {
+    title: 'Samsung Phones in Minna',
+    category: 'phones',
+    brand: 'samsung',
+    description:
+      'Browse Samsung Galaxy phones available from Donkams Computers in Minna. Contact us to confirm current models, condition, availability and pricing.',
+  },
+
+  'phones/google-pixel': {
+    title: 'Google Pixel Phones in Minna',
+    category: 'phones',
+    brand: 'google-pixel',
+    description:
+      'Browse Google Pixel phones available from Donkams Computers in Minna. Contact us to confirm current models, condition, availability and pricing.',
+  },
+
+  'computers/hp': {
+    title: 'HP Laptops in Minna',
+    category: 'laptops',
+    brand: 'hp',
+    description:
+      'Browse HP laptops available from Donkams Computers in Minna, including EliteBook, ProBook and ZBook models. Contact us for current availability and pricing.',
+  },
+
+  'computers/macbook': {
+    title: 'MacBook in Minna',
+    category: 'laptops',
+    brand: 'apple',
+    description:
+      'Browse MacBook Air laptops available from Donkams Computers in Minna, including M1, M2 and M3 models. Contact us to confirm availability and pricing.',
+  },
+
+  'computers/dell': {
+    title: 'Dell Laptops in Minna',
+    category: 'laptops',
+    brand: 'dell',
+    description:
+      'Browse Dell Latitude laptops available from Donkams Computers in Minna. Contact us to confirm current models, condition, availability and pricing.',
+  },
+
+  'starlink': {
+    title: 'Starlink in Minna',
+    category: 'starlink',
+    description:
+      'Browse Starlink equipment available from Donkams Computers in Minna, including Starlink Standard and Starlink Mini kits. Contact us for current availability and pricing.',
+  },
+
+  'gadgets/consoles': {
+    title: 'Gaming Consoles in Minna',
+    category: 'gaming',
+    description:
+      'Browse gaming consoles available from Donkams Computers in Minna, including PlayStation consoles. Contact us to confirm current availability and pricing.',
+  },
+
+  'gadgets/accessories': {
+    title: 'Gadgets & Accessories in Minna',
+    category: 'accessories',
+    description:
+      'Browse gadgets and accessories available from Donkams Computers in Minna. Contact us to confirm current stock and pricing.',
+  },
+};
 
 const route = Astro.params.route ?? '';
 const collection = collections[route as keyof typeof collections];
+
 const collectionProducts = collection
-  ? products.filter((product) =>
-      product.category === collection.category &&
-      (!collection.brand || product.brand === collection.brand)
-    )
+  ? products.filter((product) => {
+      if (product.category !== collection.category) {
+        return false;
+      }
+
+      if (
+        'brand' in collection &&
+        collection.brand &&
+        product.brand !== collection.brand
+      ) {
+        return false;
+      }
+
+      return true;
+    })
   : [];
 ---
 
 <BaseLayout
-  title={collection ? `${collection.title} | Donkams Computers` : 'Collection | Donkams Computers'}
-  description={collection ? `Browse ${collection.title} products from Donkams Computers.` : 'Browse Donkams Computers products.'}
+  title={
+    collection
+      ? `${collection.title} | Donkams Computers`
+      : 'Collection | Donkams Computers'
+  }
+  description={
+    collection
+      ? collection.description
+      : 'Browse phones, laptops, Starlink and gaming products from Donkams Computers in Minna.'
+  }
 >
   {collection ? (
+    <>
+      <section class="page-header">
+        <div class="container">
+          <p class="text-label">Donkams Computers</p>
+
+          <h1 class="page-header__title">
+            {collection.title}
+          </h1>
+
+          <p class="page-header__lede">
+            {collection.description}
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          {collectionProducts.length > 0 ? (
+            <div class="collection-grid">
+              {collectionProducts.map((product) => (
+                <ProductCard product={product} />
+              ))}
+            </div>
+          ) : (
+            <div class="empty-collection">
+              <h2>Products coming soon</h2>
+
+              <p>
+                We are updating this collection. Contact Donkams Computers
+                for current availability.
+              </p>
+
+              <a href="/contact">Contact Donkams →</a>
+            </div>
+          )}
+        </div>
+      </section>
+    </>
+  ) : (
     <section class="page-header">
       <div class="container">
-        <p class="text-label">Collection</p>
-        <h1 class="page-header__title">{collection.title}</h1>
-        <p class="page-header__lede">Browse the current {collection.title} selection. Contact Donkams for availability and pricing.</p>
-      </div>
-    </section>
+        <p class="text-label">404</p>
 
-    <section class="section">
-      <div class="container">
-        {collectionProducts.length > 0 ? (
-          <div class="collection-grid">
-            {collectionProducts.map((product) => <ProductCard product={product} />)}
-          </div>
-        ) : (
-          <div class="empty-collection">
-            <h2>Products coming soon</h2>
-            <p>We are preparing this collection. Contact Donkams for current availability.</p>
-            <a href="/contact">Contact Donkams →</a>
-          </div>
-        )}
+        <h1 class="page-header__title">
+          Collection not found
+        </h1>
+
+        <p class="page-header__lede">
+          The collection you requested does not exist.
+        </p>
+
+        <a href="/products">View all products →</a>
       </div>
     </section>
-  ) : (
-    <section class="page-header"><div class="container"><p class="text-label">404</p><h1 class="page-header__title">Collection not found</h1><p class="page-header__lede">The collection you requested does not exist.</p></div></section>
   )}
 </BaseLayout>
 
 <style>
-.collection-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-5)}
-.empty-collection{padding:var(--space-8);border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface-alt)}
-.empty-collection h2{margin:0 0 var(--space-2)}
-.empty-collection p{color:var(--color-ink-soft);margin:0 0 var(--space-4)}
-.empty-collection a{color:var(--color-teal);font-weight:var(--fw-semi);text-decoration:underline;text-underline-offset:3px}
-@media(max-width:1024px){.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){.collection-grid{grid-template-columns:1fr}}
+  .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+
+  .empty-collection {
+    padding: var(--space-8);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-alt);
+  }
+
+  .empty-collection h2 {
+    margin: 0 0 var(--space-2);
+  }
+
+  .empty-collection p {
+    margin: 0 0 var(--space-4);
+    color: var(--color-ink-soft);
+  }
+
+  .empty-collection a {
+    color: var(--color-teal);
+    font-weight: var(--fw-semi);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 1024px) {
+    .collection-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .collection-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

@@ -45,7 +45,7 @@
       "href": "/starlink"
     },
     {
-      "label": "Gadgets & Accessories",
+      "label": "Gadgets",
       "href": "/gaming",
       "children": [
         {
@@ -57,10 +57,6 @@
           "href": "/gadgets/accessories"
         }
       ]
-    },
-    {
-      "label": "Inside Donkams",
-      "href": "/#inside-donkams"
     },
     {
       "label": "About",

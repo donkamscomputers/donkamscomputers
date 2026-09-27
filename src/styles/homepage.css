@@ -1,10 +1,16 @@
+```css
 /* ============================================================
+
    DONKAMS — HOMEPAGE STYLES
+
    Sections used only on src/pages/index.astro
+
    ============================================================ */
 
 /* ============================================================
+
    SMOOTH SCROLL — for #featured anchor from hero button
+
    ============================================================ */
 
 html {
@@ -17,11 +23,15 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* ============================================================
+
    HERO — full-bleed background slideshow, centered text
+
    ============================================================ */
 
 .hero {
@@ -85,6 +95,7 @@ html {
 }
 
 /* Button contrast over dark hero */
+
 .hero__actions .btn--primary {
   background: #ffffff;
   color: var(--color-ink);
@@ -110,6 +121,7 @@ html {
 }
 
 /* Entrance animation */
+
 .hero__eyebrow,
 .hero__title,
 .hero__subtitle,
@@ -119,17 +131,33 @@ html {
   animation: hero-in 500ms var(--ease-out) forwards;
 }
 
-.hero__eyebrow { animation-delay: 0ms; }
-.hero__title { animation-delay: 100ms; }
-.hero__subtitle { animation-delay: 200ms; }
-.hero__actions { animation-delay: 300ms; }
+.hero__eyebrow {
+  animation-delay: 0ms;
+}
+
+.hero__title {
+  animation-delay: 100ms;
+}
+
+.hero__subtitle {
+  animation-delay: 200ms;
+}
+
+.hero__actions {
+  animation-delay: 300ms;
+}
 
 @keyframes hero-in {
-  to { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ============================================================
+
    FEATURED PRODUCTS — 3 columns × 2 rows (wide cards)
+
    ============================================================ */
 
 .featured {
@@ -158,21 +186,191 @@ html {
   max-width: 520px;
 }
 
-.featured__more { flex-shrink:0; color:var(--color-teal); font-size:var(--fs-small); font-weight:var(--fw-semi); text-decoration:none; padding:var(--space-2) 0; }
-.featured__more:hover { text-decoration:underline; text-underline-offset:4px; }
+.featured__more {
+  flex-shrink: 0;
+  color: var(--color-teal);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semi);
+  text-decoration: none;
+  padding: var(--space-2) 0;
+}
 
-.inside-donkams { padding-block:var(--section-y-lg); background:var(--color-surface); }
-.inside-donkams__head { margin-bottom:var(--space-7); }
-.inside-donkams__title { margin-top:var(--space-2); font-size:var(--fs-h2); line-height:var(--lh-tight); }
-.inside-donkams__lede { margin-top:var(--space-2); color:var(--color-ink-muted); max-width:680px; }
-.inside-donkams__media { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--space-4); }
-.inside-donkams__photo,.inside-donkams__video { margin:0; border:1px solid var(--color-border); border-radius:var(--radius-md); overflow:hidden; background:var(--color-surface-alt); aspect-ratio:4/3; }
-.inside-donkams__photo img,.inside-donkams__video video { width:100%; height:100%; display:block; object-fit:cover; }
-.inside-donkams__empty { padding:var(--space-7); border:1px dashed var(--color-border); border-radius:var(--radius-md); background:var(--color-surface-alt); color:var(--color-ink-soft); }
-.inside-donkams__empty strong { display:block; color:var(--color-ink); margin-bottom:var(--space-2); }
-.inside-donkams__empty p { margin:0; }
-.inside-donkams__empty code { font-size:.9em; }
+.featured__more:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
+/* ============================================================
+
+   INSIDE DONKAMS
+
+   ============================================================ */
+
+.inside-donkams {
+  padding-block: var(--section-y-lg);
+  background: var(--color-surface);
+}
+
+.inside-donkams__head {
+  margin-bottom: var(--space-7);
+}
+
+.inside-donkams__title {
+  margin-top: var(--space-2);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-tight);
+}
+
+.inside-donkams__lede {
+  margin-top: var(--space-2);
+  color: var(--color-ink-muted);
+  max-width: 680px;
+}
+
+/* Larger gallery images — 3 columns on desktop */
+
+.inside-donkams__media {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.inside-donkams__photo,
+.inside-donkams__video {
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface-alt);
+  aspect-ratio: 4 / 3;
+}
+
+.inside-donkams__photo img,
+.inside-donkams__video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.inside-donkams__empty {
+  padding: var(--space-7);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  color: var(--color-ink-soft);
+}
+
+.inside-donkams__empty strong {
+  display: block;
+  color: var(--color-ink);
+  margin-bottom: var(--space-2);
+}
+
+.inside-donkams__empty p {
+  margin: 0;
+}
+
+.inside-donkams__empty code {
+  font-size: 0.9em;
+}
+
+/* ============================================================
+
+   CLICKABLE GALLERY PHOTOS
+
+   ============================================================ */
+
+.gallery-photo-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  font: inherit;
+}
+
+.gallery-photo-button img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.gallery-photo-button:hover img {
+  transform: scale(1.03);
+}
+
+/* ============================================================
+
+   GALLERY LIGHTBOX
+
+   ============================================================ */
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.gallery-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.gallery-lightbox__image {
+  display: block;
+  max-width: min(1200px, 92vw);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gallery-lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+
+   FEATURED LINKS
+
+   ============================================================ */
 
 .featured__link {
   flex: 0 0 auto;
@@ -183,7 +381,9 @@ html {
   padding-bottom: 4px;
 }
 
-.featured__link span { margin-left: 4px; }
+.featured__link span {
+  margin-left: 4px;
+}
 
 .featured__grid {
   display: grid;
@@ -192,7 +392,9 @@ html {
 }
 
 /* ============================================================
+
    BRANDS ROW
+
    ============================================================ */
 
 .brands-row {
@@ -211,7 +413,9 @@ html {
 }
 
 /* ============================================================
+
    STORY
+
    ============================================================ */
 
 .story {
@@ -279,7 +483,9 @@ html {
 }
 
 /* ============================================================
+
    STARLINK FEATURE
+
    ============================================================ */
 
 .starlink {
@@ -337,7 +543,9 @@ html {
 }
 
 /* ============================================================
+
    WHY DONKAMS
+
    ============================================================ */
 
 .why {
@@ -378,7 +586,9 @@ html {
 }
 
 /* ============================================================
+
    CONVERSION BLOCK
+
    ============================================================ */
 
 .convert {
@@ -418,7 +628,9 @@ html {
 }
 
 /* ============================================================
+
    RESPONSIVE
+
    ============================================================ */
 
 @media (max-width: 1024px) {
@@ -427,6 +639,7 @@ html {
   }
 
   /* Keep 3 wide columns until we truly need to drop */
+
   .featured__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-3);
@@ -463,6 +676,7 @@ html {
 
 @media (max-width: 900px) {
   /* Tablet: 2 wide columns */
+
   .featured__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-4);
@@ -502,6 +716,7 @@ html {
   }
 
   /* Mobile: 1 wide column for maximum card width */
+
   .featured__grid {
     grid-template-columns: 1fr;
     gap: var(--space-4);
@@ -537,27 +752,91 @@ html {
     animation: none;
   }
 }
-/* ---------- FINAL LAYOUT TUNING ---------- */
-.hero-bg__image { object-position: center 55%; }
+
+/* ============================================================
+
+   FINAL LAYOUT TUNING
+
+   ============================================================ */
+
+.hero-bg__image {
+  object-position: center 55%;
+}
+
 .hero-bg__overlay {
-  background: linear-gradient(90deg, rgba(0, 0, 16, 0.84) 0%, rgba(0, 0, 16, 0.62) 45%, rgba(0, 0, 16, 0.2) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 16, 0.84) 0%,
+    rgba(0, 0, 16, 0.62) 45%,
+    rgba(0, 0, 16, 0.2) 100%
+  );
 }
 
 @media (max-width: 768px) {
-  .hero { min-height: 600px; }
-  .hero__content { max-width: 680px; }
-  .hero__actions { justify-content: flex-start; }
-  .featured__head { align-items: flex-start; flex-direction: column; margin-bottom: var(--space-6); }
-  .featured__link { align-self: flex-start; }
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero__content {
+    max-width: 680px;
+  }
+
+  .hero__actions {
+    justify-content: flex-start;
+  }
+
+  .featured__head {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: var(--space-6);
+  }
+
+  .featured__link {
+    align-self: flex-start;
+  }
 }
 
+/* ============================================================
 
-@media (max-width:1024px) {
-  .featured__grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-  .inside-donkams__media { grid-template-columns:repeat(2,minmax(0,1fr)); }
+   FINAL RESPONSIVE GALLERY
+
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .featured__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .inside-donkams__media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
-@media (max-width:640px) {
-  .featured__grid { grid-template-columns:1fr; }
-  .featured__head { align-items:flex-start; }
-  .inside-donkams__media { grid-template-columns:1fr; }
+
+@media (max-width: 640px) {
+  .featured__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured__head {
+    align-items: flex-start;
+  }
+
+  .inside-donkams__media {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-lightbox {
+    padding: 16px;
+  }
+
+  .gallery-lightbox__image {
+    max-width: 94vw;
+    max-height: 82vh;
+  }
+
+  .gallery-lightbox__close {
+    top: 14px;
+    right: 14px;
+  }
 }
+```
