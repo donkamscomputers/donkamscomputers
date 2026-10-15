@@ -1,0 +1,131 @@
+---
+interface Props {
+  includeWebsite?: boolean;
+  productSchema?: Record<string, unknown> | null;
+}
+
+const {
+  includeWebsite = false,
+  productSchema = null,
+} = Astro.props;
+
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://donkamscomputers.com';
+
+const openingHoursSpecification = [
+  {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '08:00',
+    closes: '18:00',
+  },
+  {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: 'Saturday',
+    opens: '08:00',
+    closes: '18:00',
+  },
+];
+
+const computerStoreSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ComputerStore',
+  '@id': `${site}/#business`,
+  name: 'Donkams Computers',
+  url: site,
+  logo: `${site}/favicon.svg`,
+  image: `${site}/images/hero-composition.jpg`,
+  description:
+    'Donkams Computers is a technology store in Minna offering smartphones, laptops, Starlink, gaming consoles and accessories from trusted brands.',
+  telephone: '+2348067397482',
+  priceRange: '₦₦',
+
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Minna',
+    addressRegion: 'Niger',
+    postalCode: '920101',
+    addressCountry: 'NG',
+  },
+
+  location: [
+    {
+      '@type': 'Place',
+      '@id': `${site}/#main-store`,
+      name: 'Donkams Computers — Minna-Zungeru Road',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress:
+          'Minna-Zungeru Road, opposite Stanbic IBTC Bank, near Obasanjo Complex',
+        addressLocality: 'Minna',
+        postalCode: '920101',
+        addressRegion: 'Niger',
+        addressCountry: 'NG',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 9.6210107,
+        longitude: 6.5460847,
+      },
+      openingHoursSpecification,
+    },
+    {
+      '@type': 'Place',
+      '@id': `${site}/#shop-2`,
+      name: 'Donkams Computers — Talba Road',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress:
+          'Shop 2, Castle Snow Plaza, Talba Road, off Minna-Bida Road',
+        addressLocality: 'Minna',
+        postalCode: '920102',
+        addressRegion: 'Niger',
+        addressCountry: 'NG',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 9.53177448,
+        longitude: 6.46544587569442,
+      },
+      openingHoursSpecification,
+    },
+  ],
+
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Minna',
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Niger State',
+    },
+  ],
+
+  sameAs: [
+    'https://www.facebook.com/100064362210511',
+    'https://www.tiktok.com/@donkams',
+    'https://x.com/Donkams_',
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${site}/#website`,
+  name: 'Donkams Computers',
+  url: site,
+  publisher: {
+    '@id': `${site}/#business`,
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(computerStoreSchema)} />
+
+{includeWebsite && (
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+)}
+
+{productSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+)}

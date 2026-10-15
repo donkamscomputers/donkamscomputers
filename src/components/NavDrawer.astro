@@ -1,0 +1,352 @@
+---
+import navigation from '../data/navigation.json';
+
+const whatsappNumber = '2348067397482';
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  "Hi Donkams, I'd like to ask about a product."
+)}`;
+---
+
+<div class="drawer-backdrop" data-drawer-backdrop hidden></div>
+
+<aside
+  id="mobile-drawer"
+  class="drawer"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Menu"
+  hidden
+>
+  <div class="drawer-head">
+    <span class="logo">DONKAMS</span>
+    <button
+      type="button"
+      class="drawer-close"
+      aria-label="Close menu"
+      data-close-drawer
+    >
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75"
+           stroke-linecap="round" aria-hidden="true">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <nav class="drawer-nav" aria-label="Mobile primary">
+    <ul>
+      {navigation.primary.map((item) =>
+        item.children && item.children.length > 0 ? (
+          <li class="drawer-group" data-drawer-group>
+            <button
+              type="button"
+              class="drawer-toggle"
+              aria-expanded="false"
+              data-drawer-toggle
+            >
+              <span>{item.label}</span>
+              <svg
+                class="drawer-toggle__chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+
+            <ul class="drawer-submenu" data-drawer-submenu hidden>
+              <li>
+                <a href={item.href} class="drawer-sublink drawer-sublink--all">
+                  All {item.label}
+                </a>
+              </li>
+              {item.children.map((child) => (
+                <li>
+                  <a href={child.href} class="drawer-sublink">
+                    {child.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ) : (
+          <li>
+            <a href={item.href} class="drawer-link">
+              {item.label}
+            </a>
+          </li>
+        )
+      )}
+    </ul>
+  </nav>
+
+  <div class="drawer-foot">
+    <a href={whatsappLink} target="_blank" rel="noopener" class="btn btn--primary btn--block">
+      WhatsApp Donkams
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</aside>
+
+<style>
+  /* ---------- BACKDROP ---------- */
+  .drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 16, 0.4);
+    z-index: var(--z-drawer);
+    opacity: 0;
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+
+  .drawer-backdrop.is-open { opacity: 1; }
+
+  /* ---------- DRAWER ---------- */
+  .drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(380px, 90vw);
+    background: var(--color-surface);
+    z-index: calc(var(--z-drawer) + 1);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform var(--dur-base) var(--ease-out);
+    padding: var(--space-5);
+    padding-top: max(var(--space-5), env(safe-area-inset-top));
+    padding-bottom: max(var(--space-5), env(safe-area-inset-bottom));
+    overflow-y: auto;
+  }
+
+  .drawer.is-open { transform: translateX(0); }
+
+  .drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-7);
+    flex-shrink: 0;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+  }
+
+  .drawer-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    color: var(--color-ink);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background var(--dur-fast) var(--ease-out);
+  }
+
+  .drawer-close:hover { background: rgba(0, 0, 16, 0.06); }
+
+  /* ---------- NAV ---------- */
+  .drawer-nav { flex: 1; }
+
+  .drawer-nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .drawer-link,
+  .drawer-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: var(--font-display);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semi);
+    letter-spacing: var(--tracking-h3);
+    color: var(--color-ink);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: color var(--dur-fast) var(--ease-out);
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .drawer-link:hover,
+  .drawer-toggle:hover { color: var(--color-teal); }
+
+  .drawer-toggle__chevron {
+    transition: transform var(--dur-fast) var(--ease-out);
+    flex-shrink: 0;
+  }
+
+  .drawer-toggle[aria-expanded="true"] .drawer-toggle__chevron {
+    transform: rotate(180deg);
+  }
+
+  /* ---------- SUBMENU ---------- */
+  .drawer-submenu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3) 0 var(--space-3) var(--space-4);
+    list-style: none;
+    margin: 0;
+    border-left: 2px solid var(--color-border);
+    margin-left: var(--space-2);
+  }
+
+  .drawer-submenu[hidden] { display: none; }
+
+  .drawer-sublink {
+    display: block;
+    padding: var(--space-2) 0;
+    font-size: var(--fs-body);
+    color: var(--color-ink-soft);
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  .drawer-sublink:hover { color: var(--color-teal); }
+
+  .drawer-sublink--all {
+    font-weight: var(--fw-semi);
+    color: var(--color-teal);
+  }
+
+  /* ---------- FOOT ---------- */
+  .drawer-foot {
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+    flex-shrink: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .drawer,
+    .drawer-backdrop,
+    .drawer-toggle__chevron,
+    .drawer-link,
+    .drawer-sublink { transition: none; }
+  }
+</style>
+
+<script>
+  const drawer = document.getElementById('mobile-drawer');
+  const backdrop = document.querySelector<HTMLElement>('[data-drawer-backdrop]');
+  const openBtn = document.querySelector<HTMLElement>('[data-open-drawer]');
+  const closeBtn = document.querySelector<HTMLElement>('[data-close-drawer]');
+
+  let lastFocused: HTMLElement | null = null;
+
+  function openDrawer() {
+    if (!drawer || !backdrop) return;
+    lastFocused = document.activeElement as HTMLElement;
+    drawer.hidden = false;
+    backdrop.hidden = false;
+    void drawer.offsetWidth;
+    drawer.classList.add('is-open');
+    backdrop.classList.add('is-open');
+    openBtn?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+
+    const firstLink = drawer.querySelector<HTMLElement>('a, button');
+    firstLink?.focus();
+  }
+
+  function closeDrawer() {
+    if (!drawer || !backdrop) return;
+    drawer.classList.remove('is-open');
+    backdrop.classList.remove('is-open');
+    openBtn?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+
+    const finish = () => {
+      drawer.hidden = true;
+      backdrop.hidden = true;
+      drawer.removeEventListener('transitionend', finish);
+      lastFocused?.focus();
+    };
+    drawer.addEventListener('transitionend', finish, { once: true });
+    setTimeout(finish, 300);
+  }
+
+  openBtn?.addEventListener('click', openDrawer);
+  closeBtn?.addEventListener('click', closeDrawer);
+  backdrop?.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer?.classList.contains('is-open')) {
+      closeDrawer();
+    }
+  });
+
+  // Accordion toggles
+  document.querySelectorAll<HTMLButtonElement>('[data-drawer-toggle]').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const group = toggle.closest<HTMLElement>('[data-drawer-group]');
+      const submenu = group?.querySelector<HTMLElement>('[data-drawer-submenu]');
+      if (!submenu) return;
+
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+
+      // Close all other submenus
+      document.querySelectorAll<HTMLElement>('[data-drawer-group]').forEach((other) => {
+        if (other === group) return;
+        const otherToggle = other.querySelector<HTMLButtonElement>('[data-drawer-toggle]');
+        const otherSubmenu = other.querySelector<HTMLElement>('[data-drawer-submenu]');
+        if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+        if (otherSubmenu) otherSubmenu.hidden = true;
+      });
+
+      toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      submenu.hidden = isOpen;
+    });
+  });
+
+  // Focus trap
+  drawer?.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const focusables = drawer.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusables.length === 0) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+</script>

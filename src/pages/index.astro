@@ -1,0 +1,317 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProductCard from '../components/ProductCard.astro';
+import HeroCarousel from '../components/HeroCarousel.astro';
+import products from '../data/products.json';
+import '../styles/homepage.css';
+import { readdirSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+const galleryDir = join(process.cwd(), 'public/images/gallery');
+const videoDir = join(process.cwd(), 'public/videos');
+
+const galleryPhotos = existsSync(galleryDir)
+  ? readdirSync(galleryDir)
+      .filter((file) => /\.(webp|jpg|jpeg|png)$/i.test(file))
+      .slice(0, 5)
+  : [];
+
+const galleryVideos = existsSync(videoDir)
+  ? readdirSync(videoDir)
+      .filter((file) => /\.(mp4|webm|mov)$/i.test(file))
+      .slice(0, 3)
+  : [];
+
+// ----- Hero -----
+const heroTitle = 'Phones, Laptops, Starlink and Gaming in Minna';
+const heroSubtitle =
+  'Shop phones, laptops, Starlink internet equipment and gaming products at Donkams Computers in Minna, Niger State. Explore iPhones, Samsung Galaxy phones, HP and Dell laptops, MacBooks, Google Pixel devices and Starlink kits. Contact us to confirm current stock, condition and prices.';
+
+// ----- Hero image -----
+const heroImages = [
+  '/images/hero-composition.webp',
+  '/images/hero-composition2.webp',
+  '/images/hero-composition3.webp',
+  '/images/hero-composition4.webp',
+];
+
+// ----- Featured products -----
+const featuredSlugs = [
+  'iphone-17-256gb',
+  'samsung-s25-ultra-256gb',
+  'hp-elitebook-x360-1030-g7-i5',
+  'dell-latitude-7420-i7',
+  'macbook-air-m1-8-256',
+  'starlink-standard-gen4',
+  'playstation-5',
+  'google-pixel-9-pro-256gb',
+];
+
+const featuredProducts = featuredSlugs
+  .map((slug) => products.find((product) => product.slug === slug))
+  .filter(
+    (product): product is (typeof products)[number] => Boolean(product)
+  );
+
+// ----- WhatsApp -----
+const whatsappNumber = '2348067397482';
+
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  "Hi Donkams, I'd like to ask about a product."
+)}`;
+---
+
+<BaseLayout title="Phones, Laptops, Starlink & Gaming in Minna" description="Shop phones, laptops, Starlink internet equipment and gaming products at Donkams Computers in Minna, Niger State. Explore iPhones, Samsung Galaxy, HP and Dell laptops, MacBooks, Google Pixel devices and Starlink kits. Contact us for current stock and pricing.">
+  <section class="hero">
+    <HeroCarousel images={heroImages} />
+
+    <div class="hero__content">
+      <h1 class="hero__title">{heroTitle}</h1>
+
+      <p class="hero__subtitle">{heroSubtitle}</p>
+
+      <div class="hero__actions">
+        <Button href="#featured" variant="primary" size="lg" icon="arrow">
+          Explore Products
+        </Button>
+
+        <Button
+          href={whatsappLink}
+          variant="secondary"
+          size="lg"
+          target="_blank"
+          rel="noopener"
+        >
+          Talk to Donkams
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-band" aria-label="Brands available at Donkams">
+    <div class="container brand-band__inner">
+      <p class="brand-band__label">Leading technology brands at Donkams</p>
+      <div class="brand-band__list" aria-label="Featured technology brands">
+        <a href="https://www.apple.com/" target="_blank" rel="noopener noreferrer" aria-label="Apple"><img src="https://cdn.simpleicons.org/apple/FFFFFF" alt="Apple" loading="lazy" /></a>
+        <a href="https://www.samsung.com/" target="_blank" rel="noopener noreferrer" aria-label="Samsung"><img src="https://cdn.simpleicons.org/samsung/FFFFFF" alt="Samsung" loading="lazy" /></a>
+        <a href="https://www.hp.com/" target="_blank" rel="noopener noreferrer" aria-label="HP"><img src="https://cdn.simpleicons.org/hp/FFFFFF" alt="HP" loading="lazy" /></a>
+        <a href="https://www.dell.com/" target="_blank" rel="noopener noreferrer" aria-label="Dell"><img src="https://cdn.simpleicons.org/dell/FFFFFF" alt="Dell" loading="lazy" /></a>
+        <a href="https://www.lenovo.com/" target="_blank" rel="noopener noreferrer" aria-label="Lenovo"><img src="https://cdn.simpleicons.org/lenovo/FFFFFF" alt="Lenovo" loading="lazy" /></a>
+        <a href="https://store.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Google"><img src="https://cdn.simpleicons.org/google/FFFFFF" alt="Google" loading="lazy" /></a>
+        <a href="https://www.starlink.com/" target="_blank" rel="noopener noreferrer" aria-label="Starlink"><img src="https://cdn.simpleicons.org/starlink/FFFFFF" alt="Starlink" loading="lazy" /></a>
+        <a href="https://www.playstation.com/" target="_blank" rel="noopener noreferrer" aria-label="PlayStation"><img src="https://cdn.simpleicons.org/playstation/FFFFFF" alt="PlayStation" loading="lazy" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="featured__head">
+        <div>
+          <h2 class="featured__title">
+            Featured Phones, Laptops, Starlink & Gaming Products
+          </h2>
+        </div>
+
+        <br />
+
+        <a href="/products" class="featured__more">
+          View More Products <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="featured__grid">
+        {featuredProducts.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="inside-donkams" id="inside-donkams">
+    <div class="container">
+      <div class="inside-donkams__head">
+        <p class="text-label">Inside Donkams</p>
+
+        <h2 class="inside-donkams__title">
+          Experience Donkams Computers
+        </h2>
+      </div>
+
+      {galleryPhotos.length > 0 || galleryVideos.length > 0 ? (
+        <div class="inside-donkams__media">
+          {galleryPhotos.map((file) => (
+            <figure class="inside-donkams__photo">
+              <button
+                type="button"
+                class="gallery-photo-button"
+                aria-label="Open Inside Donkams photo"
+                data-gallery-image={`/images/gallery/${file}`}
+              >
+                <img
+                  src={`/images/gallery/${file}`}
+                  alt="Inside Donkams Computers"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="inside-donkams__shade"></span>
+                <span class="inside-donkams__caption">
+                  <strong>{['A closer look at Donkams', 'Find your next device', 'Tech for work and play', 'Quality you can see', 'Visit us in Minna'][galleryPhotos.indexOf(file) % 5]}</strong>
+                  <small>Explore phones, computers and accessories</small>
+                </span>
+              </button>
+            </figure>
+          ))}
+
+          {galleryVideos.map((file) => (
+            <figure class="inside-donkams__video">
+              <video controls preload="metadata" playsinline>
+                <source src={`/videos/${file}`} />
+              </video>
+            </figure>
+          ))}
+        </div>
+      ) : (
+        <div class="inside-donkams__empty">
+          <strong>Your gallery is ready.</strong>
+
+          <p>
+            Add up to 5 photos to
+            <code>public/images/gallery/</code>
+            and up to 3 videos to
+            <code>public/videos/</code>.
+            They will appear here automatically.
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="customer-stories" aria-labelledby="customer-stories-title">
+    <div class="container">
+      <div class="customer-stories__heading">
+        <h2 id="customer-stories-title">What Customers Say About Donkams</h2>
+        <p>See customer ratings and read original feedback on Google.</p>
+      </div>
+      <div class="customer-stories__viewport" aria-label="Google customer review highlights">
+        <div class="customer-stories__track">
+          <div class="customer-stories__group">
+            <article class="customer-quote">
+              <div class="customer-quote__person"><span class="customer-quote__avatar" aria-hidden="true">G</span><strong>Google rating</strong></div>
+              <p class="customer-quote__rating">4.6 <span aria-label="out of 5 stars">★★★★★</span></p>
+              <p>Donkams Computers is rated 4.6 out of 5 based on 5 Google reviews.</p>
+              <a href="https://search.google.com/local/reviews?placeid=ChIJYS8CYgBxTBARCVdfIniT0eo" target="_blank" rel="noopener noreferrer">Read reviews on Google ↗</a>
+            </article>
+            <article class="customer-quote">
+              <div class="customer-quote__person"><span class="customer-quote__avatar" aria-hidden="true">✓</span><strong>Verified source</strong></div>
+              <p>Read feedback directly from customers on the Donkams Computers on Google.</p>
+              <a href="https://search.google.com/local/reviews?placeid=ChIJYS8CYgBxTBARCVdfIniT0eo" target="_blank" rel="noopener noreferrer">View customer feedback ↗</a>
+            </article>
+            <article class="customer-quote">
+              <div class="customer-quote__person"><span class="customer-quote__avatar" aria-hidden="true">📍</span><strong>Visit Donkams</strong></div>
+              <p>Explore customer ratings for Donkams Computers in Gidan Kwano, Minna, Niger State.</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Donkams+Computers+Minna+Niger+Nigeria" target="_blank" rel="noopener noreferrer">Find us on Google Maps ↗</a>
+            </article>
+          </div>
+          <div class="customer-stories__group" aria-hidden="true">
+            <article class="customer-quote">
+              <div class="customer-quote__person"><span class="customer-quote__avatar">G</span><strong>Google rating</strong></div>
+              <p class="customer-quote__rating">4.6 <span>★★★★★</span></p>
+              <p>Donkams Computers is rated 4.6 out of 5 based on 5 Google reviews.</p>
+             <a href="https://search.google.com/local/reviews?placeid=ChIJYS8CYgBxTBARCVdfIniT0eo" target="_blank" rel="noopener noreferrer">Read reviews on Google ↗</a>
+            </article>
+            <article class="customer-quote">
+              <div class="customer-quote__person"><span class="customer-quote__avatar">✓</span><strong>Verified source</strong></div>
+              <p>Read feedback directly from customers on the Donkams Computers on Google.</p>
+              <span class="customer-quote__source">View customer feedback ↗</span>
+            </article>
+            <article class="customer-quote">
+              <div class="customer-quote__person"><span class="customer-quote__avatar">📍</span><strong>Visit Donkams</strong></div>
+              <p>Explore customer ratings for Donkams Computers in Gidan Kwano, Minna, Niger State.</p>
+              <span class="customer-quote__source">Find us on Google Maps ↗</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Lightbox -->
+  <div
+    class="gallery-lightbox"
+    id="gallery-lightbox"
+    aria-hidden="true"
+  >
+    <button
+      type="button"
+      class="gallery-lightbox__close"
+      id="gallery-lightbox-close"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img
+      class="gallery-lightbox__image"
+      id="gallery-lightbox-image"
+      src=""
+      alt="Inside Donkams Computers"
+    />
+  </div>
+</BaseLayout>
+
+<script>
+  const galleryButtons = document.querySelectorAll(
+    '.gallery-photo-button'
+  );
+
+  const lightbox = document.getElementById('gallery-lightbox');
+  const lightboxImage = document.getElementById(
+    'gallery-lightbox-image'
+  );
+  const closeButton = document.getElementById(
+    'gallery-lightbox-close'
+  );
+
+  galleryButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const image = button.getAttribute('data-gallery-image');
+
+      if (!image || !lightbox || !lightboxImage) return;
+
+      lightboxImage.src = image;
+
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  const closeLightbox = () => {
+    if (!lightbox || !lightboxImage) return;
+
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+
+    lightboxImage.src = '';
+
+    document.body.style.overflow = '';
+  };
+
+  closeButton?.addEventListener('click', closeLightbox);
+
+  lightbox?.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+</script>

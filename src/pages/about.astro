@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Button from '../components/Button.astro';
+
+import '../styles/content.css';
+
+const values = [
+  {
+    label: 'Quality',
+    title: 'Products from established brands.',
+    text: 'We focus on phones, laptops, Starlink equipment, gaming products and accessories from established technology brands.',
+  },
+  {
+    label: 'Choice',
+    title: 'Technology for work, communication and everyday life.',
+    text: 'Our range includes smartphones, computers, connectivity products and accessories for different everyday needs.',
+  },
+  {
+    label: 'Support',
+    title: 'Get assistance before and after your purchase.',
+    text: 'Our team is available to answer questions and help you check product availability, condition and pricing.',
+  },
+];
+
+const whatsappNumber = '2348067397482';
+
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  "Hi Donkams, I'd like to ask a question."
+)}`;
+---
+
+<BaseLayout
+  title="About Donkams Computers | Phones, Laptops & Starlink in Minna"
+  description="Learn about Donkams Computers, a technology retailer with two stores in Minna, Niger State, offering phones, laptops, Starlink, gaming products and accessories."
+>
+  <section class="page-header">
+    <div class="container">
+      <p class="text-label page-header__eyebrow">About Donkams Computers</p>
+
+      <h1 class="page-header__title">
+        About Donkams Computers in Minna
+      </h1>
+
+      <p class="page-header__lede">
+        Donkams Computers is a technology retailer serving customers in Minna,
+        Niger State. We offer phones, laptops, Starlink equipment, gaming
+        products and everyday accessories from established technology brands,
+        with two stores in Minna.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-intro">
+    <div class="container">
+      <div class="about-intro__grid">
+        <div class="prose">
+          <h2>Phones, Laptops & Starlink in Minna</h2>
+
+          <p>
+            Donkams Computers brings together technology from brands people
+            already know and trust, including Apple, Samsung, HP, Dell, Lenovo,
+            Oraimo and Starlink. Our range is focused on products that help
+            customers work, study, communicate, connect and enjoy everyday
+            technology.
+          </p>
+
+          <h2>Phones in Minna</h2>
+
+          <p>
+            Our phone range includes iPhone, Samsung Galaxy and Google Pixel
+            devices. Depending on current stock, customers can find both new
+            and UK-used phones. Contact Donkams Computers to confirm the
+            current model, condition, availability and pricing.
+          </p>
+
+          <h2>Laptops & Computers in Minna</h2>
+
+          <p>
+            We offer laptops from brands including HP, Dell and Apple MacBook.
+            Our catalogue includes business and everyday laptops suitable for
+            work, school, business and general use. Contact us to check the
+            laptops currently available in Minna.
+          </p>
+        </div>
+
+        <div class="prose">
+          <h2>Starlink in Minna</h2>
+
+          <p>
+            Donkams Computers also supplies Starlink equipment, including
+            Starlink Standard and Starlink Mini kits. If you are looking for
+            Starlink in Minna, contact us to check the equipment currently
+            available and get information about current pricing.
+          </p>
+
+          <h2>Gaming & Accessories</h2>
+
+          <p>
+            Alongside phones, laptops and Starlink, our catalogue includes
+            gaming consoles and everyday technology accessories. We keep the
+            range focused so customers can find useful products without having
+            to search through an unnecessarily large catalogue.
+          </p>
+
+          <h2>How we work</h2>
+
+          <p>
+            We're not trying to be a marketplace or sell everything to
+            everyone. We keep a focused range of technology products and help
+            customers choose based on what they actually need.
+          </p>
+
+          <p>
+            If you're not sure what to buy, ask us. We'd rather help you find
+            the right phone, laptop, Starlink setup or accessory than have you
+            buy something that doesn't fit your needs.
+          </p>
+
+          <h2>Where to find us</h2>
+
+          <p>
+            Donkams Computers has two stores in Minna, Niger State, making it
+            easy to visit us, check available products and speak with our team
+            directly. You can also message us on WhatsApp or send an enquiry
+            through the website.
+          </p>
+
+          <div style="margin-top: var(--space-6);">
+            <Button href="/contact" variant="secondary" icon="arrow">
+              Get in touch
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-values">
+    <div class="container">
+      <SectionHeading
+        eyebrow="What matters to us"
+        title="Straightforward technology support."
+      />
+
+      <div class="about-values__grid">
+        {values.map((value) => (
+          <div class="value-block">
+            <p class="value-block__label">{value.label}</p>
+
+            <h3 class="value-block__title">
+              {value.title}
+            </h3>
+
+            <p class="value-block__text">
+              {value.text}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div
+      class="container"
+      style="text-align: center; max-width: 640px;"
+    >
+      <SectionHeading
+        eyebrow="Visit Donkams Computers"
+        title="Looking for a Phone, Laptop or Starlink in Minna?"
+        subtitle="Tell us what you need and we'll help you check current availability, condition and pricing at Donkams Computers."
+        align="center"
+      />
+
+      <div
+        style="margin-top: var(--space-7); display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;"
+      >
+        <Button
+          href={whatsappLink}
+          variant="primary"
+          size="lg"
+          icon="whatsapp"
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp Donkams Computers
+        </Button>
+
+        <Button
+          href="/#featured"
+          variant="secondary"
+          size="lg"
+          icon="arrow"
+        >
+          Browse Products
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

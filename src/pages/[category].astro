@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+
+import products from '../data/products.json';
+import { categories } from '../data/categories';
+
+export function getStaticPaths() {
+  return Object.entries(categories).map(([category, data]) => ({
+    params: { category },
+    props: { data },
+  }));
+}
+
+const { category } = Astro.params;
+const data = Astro.props.data ?? categories[category as keyof typeof categories];
+const categoryProducts = products.filter((product) => product.category === category);
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: data.heading,
+  numberOfItems: categoryProducts.length,
+  itemListElement: categoryProducts.map((product, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    url: new URL(product.path, Astro.site ?? 'https://donkamscomputers.com').toString(),
+    name: product.name,
+  })),
+};
+---
+
+<BaseLayout title={data.title} description={data.description}>
+  <section class="page-header">
+    <div class="container">
+      <p class="text-label">{data.heading}</p>
+      <h1 class="page-header__title">{data.heading}</h1>
+      <p class="page-header__lede">{data.intro}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading
+        eyebrow={`${categoryProducts.length} products`}
+        title={`Available ${data.heading.replace(' in Minna', '')}`}
+      />
+
+      <div class="category-grid">
+        {categoryProducts.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+
+      <div class="category-cta">
+        <p>
+          Looking for a specific model, storage size or condition? Contact
+          Donkams before visiting and we can confirm current availability.
+        </p>
+        <a href="/contact" class="category-cta__link">Ask Donkams</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
+</BaseLayout>
+
+<style>
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-5);
+    margin-top: var(--space-7);
+  }
+
+  .category-cta {
+    margin-top: var(--space-8);
+    padding: var(--space-6);
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+  }
+
+  .category-cta p {
+    color: var(--color-ink-soft);
+    max-width: 720px;
+  }
+
+  .category-cta__link {
+    flex-shrink: 0;
+    color: var(--color-teal);
+    font-weight: var(--fw-semi);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 1024px) {
+    .category-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .category-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .category-cta {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

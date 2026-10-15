@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+
+import '../styles/content.css';
+
+const whatsappNumber = '234806 739 7482';
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  "Hi Donkams, I hit a broken page on your site. Can you help me find what I was looking for?"
+)}`;
+---
+
+<BaseLayout
+  title="Page not found"
+  description="This page doesn't exist. Let's get you back on track."
+  noIndex={true}
+>
+  <section class="notfound">
+    <div class="notfound__watermark" aria-hidden="true">404</div>
+
+    <div class="container">
+      <div class="notfound__inner">
+        <p class="text-label">Error 404</p>
+        <h1 class="notfound__title">This page doesn't exist.</h1>
+        <p class="notfound__text">
+          The link may be broken, or the page may have moved. Let's get you
+          back on track.
+        </p>
+
+        <div class="notfound__actions">
+          <Button href="/" variant="primary" size="lg" icon="arrow">
+            Back to Home
+          </Button>
+          <Button href="/products" variant="secondary" size="lg">
+            Browse Products
+          </Button>
+        </div>
+
+        <p class="notfound__help">
+          Can't find the phone, laptop, Starlink or accessory you're looking for? <a href={whatsappLink} target="_blank" rel="noopener">Message us on WhatsApp</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,290 @@
+[
+  {
+    "slug": "iphone-12-128gb",
+    "name": "iPhone 12 128GB",
+    "brand": "apple",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/iphone-12.webp"
+  },
+  {
+    "slug": "iphone-12-pro-256gb",
+    "name": "iPhone 12 Pro 256GB",
+    "brand": "apple",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/iphone-12pro.webp"
+  },
+  {
+    "slug": "iphone-13-128gb",
+    "name": "iPhone 13 128GB",
+    "brand": "apple",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/iphone-13.webp"
+  },
+  {
+    "slug": "iphone-14-pro-max-256gb",
+    "name": "iPhone 14 Pro Max 256GB",
+    "brand": "apple",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/iphone-14-promax.webp"
+  },
+  {
+    "slug": "iphone-15-pro-max-256gb",
+    "name": "iPhone 15 Pro Max 256GB",
+    "brand": "apple",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/iphone-15-promax.webp"
+  },
+  {
+    "slug": "iphone-16-128gb",
+    "name": "iPhone 16 128GB",
+    "brand": "apple",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/iphone-16.webp"
+  },
+  {
+    "slug": "iphone-16-plus-256gb",
+    "name": "iPhone 16 Plus 256GB",
+    "brand": "apple",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/iphone-16plus.webp"
+  },
+  {
+    "slug": "iphone-17-256gb",
+    "name": "iPhone 17 256GB",
+    "brand": "apple",
+    "category": "phones",
+    "condition": "New",
+    "image": "/images/products/iphone-17.webp"
+  },
+  {
+    "slug": "iphone-17-pro-256gb",
+    "name": "iPhone 17 Pro 256GB",
+    "brand": "apple",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/iphone-17pro.webp"
+  },
+  {
+    "slug": "samsung-s21-128gb",
+    "name": "Samsung Galaxy S21 128GB",
+    "brand": "samsung",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/samsung-s21.webp"
+  },
+  {
+    "slug": "samsung-s22-128gb",
+    "name": "Samsung Galaxy S22 128GB",
+    "brand": "samsung",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/samsung-s22.webp"
+  },
+  {
+    "slug": "samsung-s23-ultra-256gb",
+    "name": "Samsung Galaxy S23 Ultra 256GB",
+    "brand": "samsung",
+    "category": "phones",
+    "condition": "UK Used",
+    "image": "/images/products/samsung-s23.webp"
+  },
+  {
+    "slug": "samsung-s24-ultra-256gb",
+    "name": "Samsung Galaxy S24 Ultra 256GB",
+    "brand": "samsung",
+    "category": "phones",
+    "condition": "Brand New",
+    "image": "/images/products/samsung-s24ultra.webp"
+  },
+  {
+    "slug": "samsung-s25",
+    "name": "Samsung Galaxy S25",
+    "brand": "samsung",
+    "category": "phones",
+    "condition": "New",
+    "image": "/images/products/samsung-s25.webp"
+  },
+  {
+    "slug": "samsung-s25-ultra-256gb",
+    "name": "Samsung Galaxy S25 Ultra 256GB",
+    "brand": "samsung",
+    "category": "phones",
+    "condition": "Brand New",
+    "image": "/images/products/samsung-s25ultra.webp"
+  },
+  {
+    "slug": "google-pixel-7",
+    "name": "Google Pixel 7",
+    "brand": "google-pixel",
+    "category": "phones",
+    "condition": "New",
+    "image": "/images/products/google-pixel7.webp"
+  },
+  {
+    "slug": "google-pixel-8-pro",
+    "name": "Google Pixel 8 Pro",
+    "brand": "google-pixel",
+    "category": "phones",
+    "condition": "New",
+    "image": "/images/products/google-pixel-8pro.webp"
+  },
+  {
+    "slug": "google-pixel-9",
+    "name": "Google Pixel 9",
+    "brand": "google-pixel",
+    "category": "phones",
+    "condition": "New",
+    "image": "/images/products/google-pixel9.webp"
+  },
+  {
+    "slug": "google-pixel-9-pro-256gb",
+    "name": "Google Pixel 9 Pro 256GB",
+    "brand": "google-pixel",
+    "category": "phones",
+    "condition": "New",
+    "image": "/images/products/google-pixel-9pro.webp"
+  },
+  {
+    "slug": "google-pixel-10-pro",
+    "name": "Google Pixel 10 Pro",
+    "brand": "google-pixel",
+    "category": "phones",
+    "condition": "New",
+    "image": "/images/products/google-pixel10pro.webp"
+  },
+  {
+    "slug": "hp-elitebook-x360-1030-g7-i5",
+    "name": "HP EliteBook x360 1030 G7 Core i5 10th Gen",
+    "brand": "hp",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/hp-elitebook-x360-1030-g7-i5.webp"
+  },
+  {
+    "slug": "hp-elitebook-840-g6-i5",
+    "name": "HP EliteBook 840 G6 Core i5 8th Gen",
+    "brand": "hp",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/hp-elitebook-840-g6-i5.webp"
+  },
+  {
+    "slug": "hp-elitebook-830-g6-i5",
+    "name": "HP EliteBook 830 G6 Core i5 8th Gen",
+    "brand": "hp",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/hp-elitebook-830-g6-i5.webp"
+  },
+  {
+    "slug": "hp-probook-440-g7-i5",
+    "name": "HP ProBook 440 G7 Core i5 10th Gen",
+    "brand": "hp",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/hp-probook-440-g7-i5.webp"
+  },
+  {
+    "slug": "dell-latitude-3330-i3",
+    "name": "Dell Latitude 3330 Core i3",
+    "brand": "dell",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/dell-latitude-3330-i3.webp"
+  },
+  {
+    "slug": "dell-latitude-7410-i5",
+    "name": "Dell Latitude 7410 Core i5 10th Gen",
+    "brand": "dell",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/dell-latitude-7410-i5.webp"
+  },
+  {
+    "slug": "dell-latitude-7420-i7",
+    "name": "Dell Latitude 7420 Core i7 11th Gen",
+    "brand": "dell",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/dell-latitude-7420-i7.webp"
+  },
+  {
+    "slug": "macbook-air-m1-8-256",
+    "name": "MacBook Air M1 8GB/256GB",
+    "brand": "apple",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/macbook-air-m1-8-256.webp"
+  },
+  {
+    "slug": "macbook-air-m2-16-512",
+    "name": "MacBook Air M2 16GB/512GB",
+    "brand": "apple",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/macbook-air-m2-16-512.webp"
+  },
+  {
+    "slug": "macbook-air-m3-8-256",
+    "name": "MacBook Air M3 8GB/256GB",
+    "brand": "apple",
+    "category": "laptops",
+    "condition": "UK Used",
+    "image": "/images/products/macbook-air-m3-8-256.webp"
+  },
+  {
+    "slug": "starlink-standard-gen4",
+    "name": "Starlink Standard Kit Gen 4",
+    "brand": "starlink",
+    "category": "starlink",
+    "condition": "Brand New",
+    "image": "/images/products/starlink-standard-gen4.webp"
+  },
+  {
+    "slug": "starlink-mini",
+    "name": "Starlink Mini",
+    "brand": "starlink",
+    "category": "starlink",
+    "condition": "Brand New",
+    "image": "/images/products/starlink-mini.webp"
+  },
+  {
+    "slug": "playstation-5",
+    "name": "PlayStation 5",
+    "brand": "sony",
+    "category": "gaming",
+    "condition": "Used / Tested",
+    "image": "/images/products/playstation-5.webp"
+  },
+  {
+    "slug": "ps4-slim-500gb-2-pads",
+    "name": "PS4 Slim 500GB + 2 New Pads",
+    "brand": "sony",
+    "category": "gaming",
+    "condition": "Open Box / Tested",
+    "image": "/images/products/ps4-slim-500gb-2-pads.webp"
+  },
+  {
+    "slug": "apple-airpods",
+    "name": "Apple AirPods",
+    "brand": "apple",
+    "category": "accessories",
+    "condition": "New",
+    "image": "/images/products/apple-airpods.webp"
+  },
+  {
+    "slug": "oraimo-buds",
+    "name": "Oraimo Buds",
+    "brand": "oraimo",
+    "category": "accessories",
+    "condition": "New",
+    "image": "/images/products/oraimo-buds.webp"
+  }
+]

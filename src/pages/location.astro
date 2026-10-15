@@ -1,0 +1,376 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+
+import '../styles/content.css';
+
+// ============================================================
+// STORE DATA — edit here, everything else renders from this
+// ============================================================
+
+const stores = [
+  {
+    id: 'main',
+    name: 'Donkams Computers',
+    label: 'Main Store',
+    address: {
+      line1: 'Minna – Zungeru Rd',
+      line2: 'Opposite Stanbic IBTC Bank',
+      line3: 'Near Obasanjo Complex',
+      line4: 'Minna, 920101, Niger State',
+    },
+    hours: [
+      { day: 'Monday – Friday', time: '8:00 – 18:00' },
+      { day: 'Saturday', time: '8:00 – 18:00' },
+      { day: 'Sunday', time: 'Closed' },
+    ],
+    phone: '+234 806 739 7482',
+    whatsapp: '2348067397482',
+    mapEmbed:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.700790322602!2d6.5460847!3d9.621010699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104c715ca16974b7%3A0x70eff5665f1f4fad!2sDonkams%20Computers!5e0!3m2!1sen!2sng!4v1790093765447!5m2!1sen!2sng',
+    // Directions link — opens Google Maps navigation
+    directionsUrl:
+      'https://www.google.com/maps/dir/?api=1&destination=Donkams+Computers&destination_place_id=ChIJt3RpoVxxTBARE09fH2Xm73A',
+  },
+  {
+    id: 'shop2',
+    name: 'Donkams Computers — Shop 2',
+    label: 'Shop 2',
+    address: {
+      line1: 'Castle Snow Plaza',
+      line2: 'Talba Road',
+      line3: 'Off Minna – Bida Road',
+      line4: 'Minna, Niger State',
+    },
+    hours: [
+      { day: 'Monday – Friday', time: '8:00 – 18:00' },
+      { day: 'Saturday', time: '8:00 – 18:00' },
+      { day: 'Sunday', time: 'Closed' },
+    ],
+    phone: '+234 806 739 7482',
+    whatsapp: '2348067397482',
+    mapEmbed:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.734567593172!2d6.46544587569442!3d9.531774480915066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104c710062022f61%3A0xead19378225f5709!2sDonkams%20Computers!5e0!3m2!1sen!2sng!4v1790093474542!5m2!1sen!2sng',
+    directionsUrl:
+      'https://www.google.com/maps/dir/?api=1&destination=Donkams+Computers&destination_place_id=ChIJYS8iYgBxxBARE1dfooMZ0eo',
+  },
+];
+
+// ============================================================
+---
+
+<BaseLayout
+  title="Location"
+  description="Visit Donkams in Minna — two stores, both open Monday to Saturday."
+>
+  <!-- ---------- PAGE HEADER ---------- -->
+  <section class="page-header">
+    <div class="container">
+      <p class="text-label page-header__eyebrow">Location</p>
+      <h1 class="page-header__title">Two stores in Minna.</h1>
+      <p class="page-header__lede">
+        Walk in and see the products for yourself. Both locations are open
+        Monday to Saturday, and both stock the same range.
+      </p>
+    </div>
+  </section>
+
+  <!-- ---------- STORES ---------- -->
+  {stores.map((store, index) => (
+    <section class:list={['store-section', { 'store-section--alt': index % 2 === 1 }]}>
+      <div class="container">
+        <div class="store-section__head">
+          <p class="text-label">{store.label}</p>
+          <h2 class="store-section__title">{store.name}</h2>
+        </div>
+
+        <div class="store-grid">
+          <!-- Info column -->
+          <div class="store-info">
+            <div class="store-block">
+              <p class="store-block__label">Address</p>
+              <p class="store-block__value">
+                {store.address.line1}<br />
+                {store.address.line2}<br />
+                {store.address.line3}<br />
+                {store.address.line4}
+              </p>
+            </div>
+
+            <div class="store-block">
+              <p class="store-block__label">Opening hours</p>
+              <ul class="store-hours">
+                {store.hours.map((h) => (
+                  <li>
+                    <span class="store-hours__day">{h.day}</span>
+                    <span class="store-hours__time">{h.time}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="store-block">
+              <p class="store-block__label">Phone</p>
+              <p class="store-block__value">
+                <a
+                  href={`tel:${store.phone.replace(/\s/g, '')}`}
+                  class="store-link"
+                >
+                  {store.phone}
+                </a>
+              </p>
+            </div>
+
+            <div class="store-actions">
+              <Button
+                href={store.directionsUrl}
+                variant="primary"
+                size="md"
+                icon="arrow"
+                target="_blank"
+                rel="noopener"
+              >
+                Get directions
+              </Button>
+
+              <Button
+                href={`https://wa.me/${store.whatsapp}?text=${encodeURIComponent(
+                  `Hi Donkams, I'd like to visit the ${store.label} store. Are you open today?`
+                )}`}
+                variant="secondary"
+                size="md"
+                icon="whatsapp"
+                target="_blank"
+                rel="noopener"
+              >
+                Check availability
+              </Button>
+            </div>
+
+            <p class="store-note">
+              Coming for something specific? Message us first. We'll confirm
+              it's in stock so you don't make the trip for nothing.
+            </p>
+          </div>
+
+          <!-- Map column -->
+          <div class="store-map">
+            <iframe
+              src={store.mapEmbed}
+              title={`Map of ${store.name}`}
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- ---------- BOTTOM CTA ---------- -->
+  <section class="section section--alt">
+    <div class="container" style="text-align: center; max-width: 640px;">
+      <h2 style="font-size: var(--fs-h2); letter-spacing: var(--tracking-h2); margin-bottom: var(--space-4);">
+        Not sure which store to visit?
+      </h2>
+      <p style="font-size: var(--fs-body-lg); color: var(--color-ink-soft); margin-bottom: var(--space-7);">
+        Tell us what you need and we'll point you to the right location or
+        confirm stock before you come.
+      </p>
+      <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+        <Button
+          href={`https://wa.me/${stores[0].whatsapp}?text=${encodeURIComponent(
+            "Hi Donkams, I'd like to check which store has what I'm looking for."
+          )}`}
+          variant="primary"
+          size="lg"
+          icon="whatsapp"
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp Donkams
+        </Button>
+        <Button href="/#featured" variant="secondary" size="lg" icon="arrow">
+          Browse Products
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ---------- STORE SECTION ---------- */
+  .store-section {
+    padding-block: var(--space-9);
+  }
+
+  .store-section--alt {
+    background: var(--color-surface-alt);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .store-section__head {
+    margin-bottom: var(--space-7);
+    max-width: 640px;
+  }
+
+  .store-section__title {
+    font-size: var(--fs-h2);
+    letter-spacing: var(--tracking-h2);
+    color: var(--color-ink);
+    margin-top: var(--space-3);
+  }
+
+  /* ---------- GRID ---------- */
+  .store-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--space-9);
+    align-items: start;
+  }
+
+  /* ---------- INFO COLUMN ---------- */
+  .store-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .store-block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .store-block:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .store-block__label {
+    font-size: var(--fs-label);
+    font-weight: var(--fw-semi);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+
+  .store-block__value {
+    font-size: var(--fs-body-lg);
+    color: var(--color-ink);
+    font-weight: var(--fw-medium);
+    line-height: 1.5;
+  }
+
+  .store-link {
+    color: var(--color-teal);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  .store-link:hover {
+    color: var(--color-teal-hover);
+  }
+
+  /* ---------- HOURS LIST ---------- */
+  .store-hours {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .store-hours li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-5);
+    font-size: var(--fs-body);
+    color: var(--color-ink);
+  }
+
+  .store-hours__day {
+    color: var(--color-ink-soft);
+  }
+
+  .store-hours__time {
+    font-weight: var(--fw-medium);
+  }
+
+  /* ---------- ACTIONS ---------- */
+  .store-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .store-note {
+    font-size: var(--fs-small);
+    color: var(--color-ink-muted);
+    line-height: 1.6;
+  }
+
+  /* ---------- MAP ---------- */
+  .store-map {
+    aspect-ratio: 4 / 3;
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: sticky;
+    top: calc(var(--header-h-lg) + var(--space-5));
+  }
+
+  .store-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: grayscale(0.5) contrast(1.05);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 1024px) {
+    .store-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-7);
+    }
+
+    .store-map {
+      position: static;
+      aspect-ratio: 16 / 10;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .store-section {
+      padding-block: var(--space-7);
+    }
+
+    .store-section__title {
+      font-size: var(--fs-h2);
+    }
+
+    .store-block__value {
+      font-size: var(--fs-body);
+    }
+
+    .store-actions {
+      gap: var(--space-2);
+    }
+
+    .store-actions .btn {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .store-link {
+      transition: none;
+    }
+  }
+</style>

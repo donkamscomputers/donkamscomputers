@@ -1,0 +1,220 @@
+---
+import navigation from '../data/navigation.json';
+import NavDropdown from './NavDropdown.astro';
+import NavDrawer from './NavDrawer.astro';
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string) {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+
+const whatsappNumber = '2348067397482';
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  "Hi Donkams, I'd like to ask about a product."
+)}`;
+---
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <!-- Logo -->
+    <a href="/" class="logo" aria-label="Donkams — home">
+      DONKAMS COMPUTERS
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="nav-desktop" aria-label="Primary">
+      <ul>
+        {navigation.primary.map((item) =>
+          item.children && item.children.length > 0 ? (
+            <li class="nav-item nav-item--has-children">
+              <NavDropdown item={item} isActive={isActive(item.href)} />
+            </li>
+          ) : (
+            <li class="nav-item">
+              <a
+                href={item.href}
+                class:list={['nav-link', { 'is-active': isActive(item.href) }]}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          )
+        )}
+      </ul>
+    </nav>
+
+    <!-- Right cluster -->
+    <div class="header-actions">
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener"
+        class="btn btn--primary btn--sm header-cta"
+      >
+        WhatsApp
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </a>
+
+      <button
+        type="button"
+        class="icon-btn menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+        data-open-drawer
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.75"
+             stroke-linecap="round" aria-hidden="true">
+          <path d="M3 6h18" />
+          <path d="M3 12h18" />
+          <path d="M3 18h18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<NavDrawer />
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+    height: var(--header-h-lg);
+    background: rgba(240, 240, 240, 0.85);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    transition: border-color var(--dur-fast) var(--ease-out),
+                background var(--dur-fast) var(--ease-out);
+    border-bottom: 1px solid transparent;
+  }
+
+  .site-header.is-scrolled {
+    border-bottom-color: var(--color-border);
+    background: rgba(240, 240, 240, 0.92);
+  }
+
+  .header-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+    flex-shrink: 0;
+  }
+
+  /* ---------- DESKTOP NAV ---------- */
+  .nav-desktop ul {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    color: var(--color-ink-soft);
+    position: relative;
+    padding: var(--space-2) 0;
+    transition: color var(--dur-fast) var(--ease-out);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+  }
+
+  .nav-link:hover { color: var(--color-ink); }
+
+  .nav-link.is-active { color: var(--color-ink); }
+
+  .nav-link.is-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: var(--color-teal);
+    border-radius: var(--radius-full);
+  }
+
+  /* ---------- ACTIONS ---------- */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    color: var(--color-ink);
+    transition: background var(--dur-fast) var(--ease-out);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .icon-btn:hover { background: rgba(0, 0, 16, 0.06); }
+
+  .header-cta { display: inline-flex; }
+
+  .menu-toggle { display: none; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 1024px) {
+    .nav-desktop { display: none; }
+    .menu-toggle { display: inline-flex; }
+  }
+
+  @media (max-width: 768px) {
+    .site-header { height: var(--header-h-sm); }
+    .header-cta { display: none; }
+    .logo { font-size: var(--fs-body-lg); }
+  }
+</style>
+
+<script>
+  const header = document.getElementById('site-header');
+  const onScroll = () => {
+    if (!header) return;
+    header.classList.toggle('is-scrolled', window.scrollY > 40);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
